@@ -60,8 +60,12 @@ a, button {
 
   // Начальная страница с градиентом
 body#home {
-  background: linear-gradient(to top, $body 0%, lighten($body, 5) 50%, $body 50%);
-  @media (min-width: 700px) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $body;
+  background: linear-gradient(to top, $body 0%, lighten($body, 5) 49.99%, $body 50%);
+  @media (min-width: 500px) {
     overflow: hidden;
   }
   @media only screen
@@ -95,12 +99,13 @@ div#logo {
 main#home {
   height: 100%;
   position: relative;
-  @media (min-width: 700px) {
-    width: 700px;
+  @media only screen and (min-width: 500px) {
+    width: 500px;
+    // height: 1000px;
     margin: auto;
   }
   @media only screen 
-    and (max-width: 700px)
+    and (max-width: 500px)
     and (orientation: portrait) {
     overflow: hidden;
   }
@@ -122,7 +127,7 @@ main#home {
       width: 50%;
       font-size: 2.6rem;
       line-height: 30px;
-      @media (min-width: 700px) {
+      @media (min-width: 500px) {
         font-size: 3.1rem;
         line-height: 35px;
       }
@@ -262,7 +267,7 @@ main#home {
   @extend .btn;
   &:hover {
     &::after {
-      transform: scale(.95);
+      transform: scale(.93);
     }
   }
 }
