@@ -19,7 +19,7 @@ html, body {
   position: relative; }
   @media only screen and (min-device-width: 320px) and (max-device-width: 900px) and (orientation: landscape) {
     html, body {
-      min-height: 100%; } }
+      height: auto; } }
 
 a {
   text-decoration: none;
@@ -61,37 +61,13 @@ body#home {
     body#home {
       overflow: auto; } }
 
-div#logo {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-right: 10px;
-  position: absolute;
-  z-index: 10; }
-  div#logo span {
-    font-size: 1.15rem;
-    color: rgba(230, 230, 230, 0.8); }
-  div#logo img {
-    width: 38px;
-    opacity: .8; }
-
 main#home {
-  height: 100%;
-  position: relative; }
+  height: 100%; }
   @media only screen and (min-width: 500px) {
     main#home {
       width: 500px;
+      max-height: 800px;
       margin: auto; } }
-  @media only screen and (max-width: 500px) and (orientation: portrait) {
-    main#home {
-      overflow: hidden; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 900px) and (orientation: landscape) {
     main#home {
       width: 100%; } }
@@ -188,9 +164,7 @@ main#home {
         min-height: 150px; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 900px) and (orientation: landscape) {
     main#home section.home {
-      width: 100%;
-      min-height: 250px;
-      overflow: hidden; } }
+      min-height: 250px; } }
 
 .btn, .link-btn, .circle-btn, .main-phone-btn,
 .main-email-btn, .main-geo-btn {
@@ -252,7 +226,12 @@ main#home {
   .main-phone-btn i,
   .main-email-btn i {
     color: #67658D;
-    font-size: 3.6rem; }
+    font-size: 3.6rem;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
+  .main-phone-btn:hover i,
+  .main-email-btn:hover i {
+    color: #A8B780; }
 
 .main-geo-btn {
   width: 88px;
@@ -260,6 +239,40 @@ main#home {
   .main-geo-btn i {
     color: #D56060;
     font-size: 4.4rem; }
+
+div#logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 10px;
+  position: absolute;
+  z-index: 10; }
+  div#logo span {
+    font-size: 1.15rem;
+    color: rgba(230, 230, 230, 0.8); }
+  div#logo img {
+    width: 38px;
+    opacity: .8; }
+
+div#home-bg {
+  height: 100%;
+  width: 500px;
+  position: absolute; }
+  @media only screen and (max-width: 500px) and (orientation: portrait) {
+    div#home-bg {
+      overflow: hidden;
+      width: 100%; } }
+  @media only screen and (min-device-width: 320px) and (max-device-width: 900px) and (orientation: landscape) {
+    div#home-bg {
+      overflow: hidden;
+      width: 100%; } }
 
 .ring, #ring1, #ring2, #ring3, #ring4, #ring5 {
   position: absolute;

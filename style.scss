@@ -33,7 +33,7 @@ html, body {
     and (min-device-width: 320px) 
     and (max-device-width: 900px)
     and (orientation: landscape) {
-      min-height: 100%;
+      height: auto;
   }
 }
 a {
@@ -58,6 +58,9 @@ a, button {
   -webkit-tap-highlight-color: transparent;
 }
 
+// IMPORTS
+
+
   // Начальная страница с градиентом
 body#home {
   display: flex;
@@ -76,38 +79,13 @@ body#home {
     }
 }
 
-  // Логотип
-div#logo {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-right: 10px;
-  position: absolute;
-  z-index: 10;
-  span {
-    font-size: 1.15rem;
-    color: rgba($text, .8);
-  }
-  img {
-    width: 38px;
-    opacity: .8;
-  }
-}
-
   // Содержание
 main#home {
   height: 100%;
-  position: relative;
   @media only screen and (min-width: 500px) {
     width: 500px;
-    // height: 1000px;
+    max-height: 800px;
     margin: auto;
-  }
-  @media only screen 
-    and (max-width: 500px)
-    and (orientation: portrait) {
-    overflow: hidden;
   }
   @media only screen 
     and (min-device-width: 320px)
@@ -217,14 +195,12 @@ main#home {
       and (min-device-width: 320px)
       and (max-device-width: 900px)
       and (orientation: landscape) {
-        width: 100%;
         min-height: 250px;
-        overflow: hidden;
       }
   }
 }
 
-  // Шаблон кнопки
+  ///// Шаблон кнопки
 .btn {
   position: relative;
   border-radius: 150px;
@@ -279,6 +255,12 @@ main#home {
   i {
     color: $violet;
     font-size: 3.6rem;
+    transition: all .3s ease-in-out;
+  }
+  &:hover {
+    i {
+      color: $green;
+    }
   }
 }
 .main-geo-btn {
@@ -292,6 +274,45 @@ main#home {
 }
 
   // Фоновые круги
+  // Логотип
+div#logo {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+  position: absolute;
+  z-index: 10;
+  span {
+    font-size: 1.15rem;
+    color: rgba($text, .8);
+  }
+  img {
+    width: 38px;
+    opacity: .8;
+  }
+}
+
+  // Фон
+div#home-bg {
+  height: 100%;
+  width: 500px;
+  position: absolute;
+  @media only screen 
+    and (max-width: 500px)
+    and (orientation: portrait) {
+      overflow: hidden;
+      width: 100%;
+  }
+  @media only screen 
+    and (min-device-width: 320px)
+    and (max-device-width: 900px)
+    and (orientation: landscape) {
+      overflow: hidden;
+      width: 100%;
+    }
+}
+  // Круги
 .ring {
   position: absolute;
   border-radius: 50%;
