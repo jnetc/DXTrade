@@ -182,7 +182,15 @@ main#home section.home:nth-of-type(3) a.link-btn {
 
 main#home section.home:nth-of-type(1) a.link-btn i,
 main#home section.home:nth-of-type(3) a.link-btn i {
-  font-size: 2rem;
+  opacity: .5;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+main#home section.home:nth-of-type(1) a.link-btn:hover i,
+main#home section.home:nth-of-type(3) a.link-btn:hover i {
+  opacity: 1;
+  margin-left: 5px;
 }
 
 main#home section.home:nth-of-type(1) h1 {
@@ -270,12 +278,6 @@ main#home section.home:nth-of-type(2) {
   background: #6c758a;
 }
 
-.btn:hover::after, .link-btn:hover::after, .circle-btn:hover::after, .main-phone-btn:hover::after,
-.main-email-btn:hover::after, .main-geo-btn:hover::after {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-}
-
 .btn::after, .link-btn::after, .circle-btn::after, .main-phone-btn::after,
 .main-email-btn::after, .main-geo-btn::after {
   content: '';
@@ -313,6 +315,12 @@ main#home section.home:nth-of-type(2) {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 17px;
+}
+
+.circle-btn:hover::after, .main-phone-btn:hover::after,
+.main-email-btn:hover::after, .main-geo-btn:hover::after {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .main-phone-btn,

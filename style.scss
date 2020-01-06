@@ -144,7 +144,14 @@ main#home {
       margin-top: 15px;
       z-index: 5;
       i {
-        font-size: 2rem;
+        opacity: .5;        
+        transition: all .3s ease-in-out;
+      }
+      &:hover {
+        i {
+          opacity: 1;
+          margin-left: 5px;
+        }
       }
     }
     
@@ -222,10 +229,6 @@ main#home {
   z-index: 5;
   &:hover {
     background: lighten($border, 10);
-    &::after {
-      // background: darken($body, 2);
-      transform: scale(.9);
-    }
   }
   &::after {
     content: '';
@@ -257,6 +260,11 @@ main#home {
   align-items: center;
   margin: 0 17px;
   @extend .btn;
+  &:hover {
+    &::after {
+      transform: scale(.95);
+    }
+  }
 }
 .main-phone-btn,
 .main-email-btn {
