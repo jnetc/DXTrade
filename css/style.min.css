@@ -433,28 +433,45 @@ div#home-bg {
             transform: translate(0, 0); } }
 
 .svgring, #svg-ring1, #svg-ring2 {
-  width: 260px;
-  height: 260px;
-  fill: transparent;
-  opacity: .3;
   position: absolute;
-  stroke-width: 5px;
-  stroke: #565D6D;
+  opacity: .3;
   z-index: 1; }
+  .svgring svg, #svg-ring1 svg, #svg-ring2 svg {
+    width: inherit;
+    height: inherit;
+    fill: transparent;
+    stroke-width: 5px;
+    stroke: #565D6D; }
 
 #svg-ring1 {
-  top: -150px;
+  width: 260px;
+  height: 260px;
+  top: 40%;
   left: -110px;
-  stroke-dasharray: 9px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   -webkit-animation: svgring1 40s linear infinite;
           animation: svgring1 40s linear infinite; }
+  @media (max-width: 500px) {
+    #svg-ring1 {
+      left: -155px; } }
+  #svg-ring1 svg {
+    stroke-dasharray: 9px; }
 
 #svg-ring2 {
+  width: 320px;
+  height: 320px;
+  top: 30%;
   right: -160px;
-  bottom: -100px;
-  stroke-dasharray: 21px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-animation: svgring2 60s linear infinite;
           animation: svgring2 60s linear infinite; }
+  @media (max-width: 500px) {
+    #svg-ring2 {
+      right: -240px; } }
+  #svg-ring2 svg {
+    stroke-dasharray: 21px; }
 
 @-webkit-keyframes svgring1 {
   0% {

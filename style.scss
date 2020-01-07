@@ -392,28 +392,48 @@ div#home-bg {
 
   // SVG кольца
 .svgring {
+  position: absolute;
+  opacity: .3;
+  z-index: 1;
+  svg {
+    width: inherit;
+    height: inherit;
+    fill: transparent;
+    stroke-width: 5px;
+    stroke: $border;
+  }
+}
+
+#svg-ring1 {
   width: 260px;
   height: 260px;
-  fill: transparent;
-  opacity: .3;
-  position: absolute;
-  stroke-width: 5px;
-  stroke: $border;
-  z-index: 1;
-}
-#svg-ring1 {
   @extend .svgring;
-  top: -150px;
+  top: 40%;
   left: -110px;
-  stroke-dasharray: 9px;
+  transform: translateY(-50%);
   animation: svgring1 40s linear infinite;
+  @media (max-width: 500px) {
+    left: -155px;
+  }
+  svg {
+    stroke-dasharray: 9px;
+  }
+
 }
 #svg-ring2 {
+  width: 320px;
+  height: 320px;
   @extend .svgring;
+  top: 30%;
   right: -160px;
-  bottom: -100px;
-  stroke-dasharray: 21px;
+  transform: translateX(-50%);
   animation: svgring2 60s linear infinite;
+  @media (max-width: 500px) {
+    right: -240px;
+  }
+  svg {
+    stroke-dasharray: 21px;
+  }
 }
 
 @keyframes svgring1 {
