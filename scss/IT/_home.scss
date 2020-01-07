@@ -7,3 +7,164 @@ $red: #D56060;
 $blue: #27588D;
 $violet: #67658D;
 $shadow: #000000;
+
+body#it-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main#it-home {
+  height: 100%;
+  @media only screen and (min-width: 500px) {
+    width: 500px;
+    max-height: 800px;
+    margin: auto;
+  }
+  @media only screen 
+    and (min-device-width: 320px)
+    and (max-device-width: 900px)
+    and (orientation: landscape) {
+      width: 100%;
+    }
+}
+section.top-image {
+  height: 365px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg#virus {
+    width: 500px;
+    height: 100%;
+    @media (max-width: 500px) {
+      width: 100%;
+    }
+  }
+  image#virus-monster {
+    transform: translate(25%, 25%) scale(1.6);
+    @media (max-width: 500px) {
+      width: 215px;
+      transform: translate(22%, 25%);
+    }
+  }
+  g#virus-drops {
+    transform: translate(25%, 25%) scale(1.2);
+    @media (max-width: 500px) {
+      width: 215px;
+      transform: translate(22%, 25%);
+    }
+    #drop1 {
+      width: 14px;
+      transform: translate(10px, 150px);
+      animation: drop1 5s ease-in-out infinite;
+    }
+    #drop2 {
+      width: 8px;
+      transform: translate(0px, 140px);
+      animation: drop2 3s ease-in-out infinite;
+    }
+    #drop3 {
+      width: 8px;
+      transform: translate(25px, 20px);
+      animation: drop3 5s ease-in-out infinite;
+    }
+    #drop4 {
+      width: 10px;
+      transform: translate(110px, -20px);
+      animation: drop4 4s ease-in-out infinite;
+    }
+    #drop5 {
+      width: 6px;
+      transform: translate(125px, -5px);
+      animation: drop5 6s ease-in-out infinite;
+    }
+    #drop6 {
+      width: 7px;
+      transform: translate(180px, 0px);
+      animation: drop6 7s ease-in-out infinite;
+    }
+    #drop7 {
+      width: 5px;
+      transform: translate(160px, 30px);
+      animation: drop7 3s ease-in-out infinite;
+    }
+    #drop8 {
+      width: 10px;
+      transform: translate(185px, 80px);
+      animation: drop8 4s ease-in-out infinite;
+    }
+    #drop9 {
+      width: 14px;
+      transform: translate(200px, 110px);
+      animation: drop9 7s ease-in-out infinite;
+    }
+  }
+}
+
+@keyframes drop1 {
+  50% {transform: translate(10px, 140px);}
+}
+@keyframes drop2 {
+  50% {transform: translate(0px, 145px);}
+}
+@keyframes drop3 {
+  50% {transform: translate(25px, 30px);}
+}
+@keyframes drop4 {
+  50% {transform: translate(110px, -5px);}
+}
+@keyframes drop5 {
+  50% {transform: translate(125px, -15px);}
+}
+@keyframes drop6 {
+  50% {transform: translate(180px, -10px);}
+}
+@keyframes drop7 {
+  50% {transform: translate(160px, 20px);}
+}
+@keyframes drop8 {
+  50% {transform: translate(185px, 90px);}
+}
+@keyframes drop9 {
+  50% {transform: translate(200px, 100px);}
+}
+
+
+
+section.content {
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: 500px) {
+    font-size: 7rem;
+  }
+  h1 {
+    font-size: 8rem;
+    @media (max-width: 500px) {
+      font-size: 7rem;
+    }
+  }
+  h2 {
+    font-size: 3.3rem;
+    @media (max-width: 500px) {
+      font-size: 2.8rem;
+    }
+  }
+  h3 {
+    font-size: 3.3rem;
+    margin: 15px 0 30px;
+    @media (max-width: 500px) {
+      font-size: 1.7rem;
+    }
+  }
+  p {
+    margin-bottom: 40px;
+    font-size: 1.6rem;
+    // text-align: center;
+    @media (max-width: 500px) {
+      width: 85%;
+      font-size: 1.5rem;
+    }
+  }
+}
