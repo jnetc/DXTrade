@@ -8,15 +8,21 @@ $blue: #27588D;
 $violet: #67658D;
 $shadow: #000000;
 
+
+
 // Начальная страница с градиентом
 body#main-p {
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   background: $body;
-  background: linear-gradient(to top, $body 0%, lighten($body, 5) 49.99%, $body 50%);
+  // background: linear-gradient(to top, $body 0%, lighten($body, 5) 49.99%, $body 50%);
+  // overflow: hidden;
+  width: 100%;
   @media (min-width: 500px) {
-    overflow: hidden;
+    // height: 600px;
+    margin: auto;
   }
   @media only screen
     and (min-device-width: 320px)
@@ -28,11 +34,12 @@ body#main-p {
 
   // Содержание
 main#main-p {
-  height: 100%;
-  @media only screen and (min-width: 500px) {
-    width: 500px;
-    max-height: 800px;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: center;
+  @media only screen and (min-width: 700px) {
+    width: 700px;
   }
   @media only screen 
     and (min-device-width: 320px)
@@ -40,12 +47,32 @@ main#main-p {
     and (orientation: landscape) {
       width: 100%;
     }
-  section.main-p:nth-of-type(1),
-  section.main-p:nth-of-type(3) {
-    height: 40%;
+    // Логотип
+  div#logo {
+    width: 100%;
+    display: flex;
+    // justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    padding-left: 20px;
+    // position: absolute;
+    z-index: 10;
+    span {
+      font-size: 1.3rem;
+      color: rgba($text, .8);
+    }
+    img {
+      width: 45px;
+      opacity: .8;
+    }
+  }
+  section.main-p:nth-of-type(odd),
+  section.main-p:nth-of-type(even) {
+    min-height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 10px 0;
     position: relative;
     z-index: 5;
     h1 {
@@ -86,7 +113,7 @@ main#main-p {
     }
     
   }
-  section.main-p:nth-of-type(1) {
+  section.main-p:nth-of-type(odd) {
     h1 {
       padding-left: 20px;
       color: $green;
@@ -102,7 +129,7 @@ main#main-p {
       }
     }
   }
-  section.main-p:nth-of-type(3) {
+  section.main-p:nth-of-type(even) {
     h1 {
       margin-left: auto;
       padding-right: 20px;
@@ -123,8 +150,8 @@ main#main-p {
     }
   }
 
-  section.main-p:nth-of-type(2) {
-    min-height: 20%;
+  section.main-footer {
+    min-height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,7 +169,7 @@ main#main-p {
       and (min-device-width: 320px)
       and (max-device-width: 900px)
       and (orientation: landscape) {
-        min-height: 250px;
+        // min-height: 250px;
       }
   }
 }
@@ -177,30 +204,14 @@ main#main-p {
   
   
   // Фоновые круги
-  // Логотип
-  div#logo {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 10px;
-    position: absolute;
-    z-index: 10;
-    span {
-      font-size: 1.15rem;
-      color: rgba($text, .8);
-    }
-    img {
-      width: 38px;
-      opacity: .8;
-    }
-  }
+
   
     // Фон
   div#main-p-bg {
     height: 100%;
-    width: 500px;
+    width: 700px;
     position: absolute;
+    // overflow: hidden;
     @media only screen 
       and (max-width: 500px)
       and (orientation: portrait) {
@@ -219,53 +230,66 @@ main#main-p {
   .ring {
     position: absolute;
     border-radius: 50%;
-    box-shadow: 15px 15px 15px rgba($shadow, .15);
     z-index: 1;
   }
   #ring1 {
     @extend .ring;
     width: 270px;
     height: 270px;
-    bottom: -100px;
+    bottom: 100px;
     left: -90px;
     background-color: $blue;
     animation: ring1a 60s ease-in-out infinite;
+    box-shadow: 15px 15px 15px rgba($shadow, .15);
   }
   
   #ring2 {
     @extend .ring;
-    width: 270px;
-    height: 270px;
-    bottom: -190px;
-    right: -150px;
-    background-color: $orange;
-    animation: ring2a 60s ease-in-out infinite;
-    animation-delay: 2s;
-  }
-  #ring3 {
-    @extend .ring;
     width: 200px;
     height: 200px;
-    bottom: -100px;
+    bottom: 100px;
     left: -90px;
     background-color: $body;
     animation: ring1a 60s ease-in-out infinite;
     animation-delay: 10s;
   }
+  #ring3 {
+    @extend .ring;
+    width: 270px;
+    height: 270px;
+    bottom: 190px;
+    right: -150px;
+    background-color: $orange;
+    animation: ring2a 60s ease-in-out infinite;
+    box-shadow: 15px 15px 15px rgba($shadow, .15);
+    animation-delay: 2s;
+  }
   #ring4 {
     @extend .ring;
-    width: 370px;
-    height: 370px;
-    top: -190px;
-    right: -210px;
-    background-color: $green;
+    width: 200px;
+    height: 200px;
+    bottom: 190px;
+    right: -150px;
+    background-color: $body;
+    animation: ring1b 60s ease-in-out infinite;
+    animation-delay: 5s;
   }
   #ring5 {
     @extend .ring;
-    width: 370px;
-    height: 370px;
-    top: -280px;
-    right: -210px;
+    width: 320px;
+    height: 320px;
+    top: -210px;
+    right: -150px;
+    background-color: $green;
+    box-shadow: 15px 15px 15px rgba($shadow, .15);
+    animation: ring4a 30s ease-in-out infinite;
+  }
+  #ring6 {
+    @extend .ring;
+    width: 300px;
+    height: 300px;
+    top: -250px;
+    right: -150px;
     background-color: $body;
     animation: ring4a 60s ease-in-out infinite;
     animation-delay: 5s;
@@ -278,6 +302,13 @@ main#main-p {
     75% {transform: translate(20px, 30px) scale(1.1);}
     90% {transform: translate(0, 0);}
   }
+  @keyframes ring1b {
+    0% {transform: translate(0, 0);}
+    20% {transform: translate(-50px, 5px) scale(1.3);}
+    50% {transform: translate(-35px, 0px) scale(.9);}
+    75% {transform: translate(30px, 40px) scale(1.2);}
+    90% {transform: translate(0, 0);}
+  }
   @keyframes ring2a {
     3% {transform: translate(0, 0);}
     25% {transform: translate(20px, -10px) scale(.9);}
@@ -287,9 +318,9 @@ main#main-p {
   }
   @keyframes ring4a {
     5% {transform: translate(0, 0);}
-    30% {transform: translate(0px, 50px) }
-    50% {transform: translate(0px, 30px) }
-    75% {transform: translate(0px, 10px) }
+    30% {transform: translate(-10px, 50px) scale(1.2); }
+    50% {transform: translate(25px, -30px) scale(.9); }
+    75% {transform: translate(-20px, 10px) scale(1.1); }
     100% {transform: translate(0, 0);}
   }
   
@@ -327,7 +358,7 @@ main#main-p {
     width: 320px;
     height: 320px;
     @extend .svgring;
-    top: 30%;
+    top: 20%;
     right: -160px;
     transform: translateX(-50%);
     animation: svgring2 60s linear infinite;
