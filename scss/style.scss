@@ -136,8 +136,10 @@ a, button {
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  margin-bottom: 60px;
   color: darken($text, 20);
+  @media (max-device-width: 600px) {
+    margin-bottom: 100px;
+  }
   @extend .btn2;
   div.icon-bt {
     width: 40px;
@@ -201,6 +203,71 @@ a, button {
     &::after {
       transform: scale(.93);
     }
+  }
+}
+
+  // NНАВИГАЦИЯ ПО САЙТАМ
+nav {
+  width: 500px;
+  position: fixed;
+  z-index: 1000;
+  @media (max-width: 500px) {
+      width: 100%;
+      bottom: 0;
+      background: darken($body, 5);
+    }
+
+  @media (min-width: 500px) {
+    top: 0;
+    border-radius:  0 0 15px 15px;
+    background: lighten($body, 3);
+    box-shadow: 5px 15px 15px rgba($shadow, .3);
+  }
+  ul#navigation {
+    display: flex;
+    justify-content: space-around;
+    li {
+      position: relative;
+      &.active-btn {
+        &::after {
+          content: '';
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: lighten($body, 50);
+        }
+      }
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      color: lighten($body, 25);
+      font-size: 1.3rem;
+      font-weight: 400;
+      transition: all .3s ease-in-out;
+      i {
+        color: lighten($body, 10);
+        font-size: 2.5rem;
+        transition: all .3s ease-in-out;
+      }
+      &:hover {
+        color: lighten($body, 50);
+        i {
+          color: lighten($body, 50);
+        }
+      }
+      &.active {
+        color: lighten($body, 50);
+        i {
+          color: lighten($body, 50);
+        }
+      }
+    }
+
   }
 }
   

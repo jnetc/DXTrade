@@ -17,11 +17,8 @@ body#main-p {
   justify-content: center;
   align-items: center;
   background: $body;
-  // background: linear-gradient(to top, $body 0%, lighten($body, 5) 49.99%, $body 50%);
-  // overflow: hidden;
   width: 100%;
   @media (min-width: 500px) {
-    // height: 600px;
     margin: auto;
   }
   @media only screen
@@ -36,7 +33,6 @@ body#main-p {
 main#main-p {
   display: flex;
   flex-direction: column;
-  // align-items: center;
   justify-content: center;
   @media only screen and (min-width: 700px) {
     width: 700px;
@@ -241,6 +237,7 @@ main#main-p {
     background-color: $blue;
     animation: ring1a 60s ease-in-out infinite;
     box-shadow: 15px 15px 15px rgba($shadow, .15);
+    opacity: .5;
   }
   
   #ring2 {
@@ -262,6 +259,7 @@ main#main-p {
     background-color: $orange;
     animation: ring2a 60s ease-in-out infinite;
     box-shadow: 15px 15px 15px rgba($shadow, .15);
+    opacity: .5;
     animation-delay: 2s;
   }
   #ring4 {
@@ -276,20 +274,21 @@ main#main-p {
   }
   #ring5 {
     @extend .ring;
-    width: 320px;
-    height: 320px;
-    top: -210px;
-    right: -150px;
+    width: 250px;
+    height: 250px;
+    top: -200px;
+    right: -70px;
     background-color: $green;
     box-shadow: 15px 15px 15px rgba($shadow, .15);
     animation: ring4a 30s ease-in-out infinite;
+    opacity: .5;
   }
   #ring6 {
     @extend .ring;
-    width: 300px;
-    height: 300px;
-    top: -250px;
-    right: -150px;
+    width: 200px;
+    height: 200px;
+    top: -180px;
+    right: -50px;
     background-color: $body;
     animation: ring4a 60s ease-in-out infinite;
     animation-delay: 5s;
@@ -297,16 +296,16 @@ main#main-p {
   
   @keyframes ring1a {
     0% {transform: translate(0, 0);}
-    20% {transform: translate(-80px, 15px) scale(1.4);}
+    20% {transform: translate(-80px, 15px) scale(1.1);}
     50% {transform: translate(-25px, 5px) scale(.9);}
     75% {transform: translate(20px, 30px) scale(1.1);}
     90% {transform: translate(0, 0);}
   }
   @keyframes ring1b {
     0% {transform: translate(0, 0);}
-    20% {transform: translate(-50px, 5px) scale(1.3);}
+    20% {transform: translate(-50px, 5px) scale(1.1);}
     50% {transform: translate(-35px, 0px) scale(.9);}
-    75% {transform: translate(30px, 40px) scale(1.2);}
+    75% {transform: translate(30px, 40px) scale(1.1);}
     90% {transform: translate(0, 0);}
   }
   @keyframes ring2a {
@@ -318,7 +317,7 @@ main#main-p {
   }
   @keyframes ring4a {
     5% {transform: translate(0, 0);}
-    30% {transform: translate(-10px, 50px) scale(1.2); }
+    30% {transform: translate(-10px, 50px) scale(1.1); }
     50% {transform: translate(25px, -30px) scale(.9); }
     75% {transform: translate(-20px, 10px) scale(1.1); }
     100% {transform: translate(0, 0);}

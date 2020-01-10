@@ -123,8 +123,10 @@ a, button {
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  margin-bottom: 60px;
   color: #b3b3b3; }
+  @media (max-device-width: 600px) {
+    .it-btn {
+      margin-bottom: 100px; } }
   .it-btn div.icon-bt {
     width: 40px;
     height: 40px;
@@ -203,6 +205,69 @@ a, button {
   .main-email-btn:hover::after, .main-geo-btn:hover::after {
     -webkit-transform: scale(0.93);
             transform: scale(0.93); }
+
+nav {
+  width: 500px;
+  position: fixed;
+  z-index: 1000; }
+  @media (max-width: 500px) {
+    nav {
+      width: 100%;
+      bottom: 0;
+      background: #1b212e; } }
+  @media (min-width: 500px) {
+    nav {
+      top: 0;
+      border-radius: 0 0 15px 15px;
+      background: #2a3448;
+      -webkit-box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.3);
+              box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.3); } }
+  nav ul#navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    nav ul#navigation li {
+      position: relative; }
+      nav ul#navigation li.active-btn::after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #9caac5; }
+    nav ul#navigation a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 10px;
+      color: #53688f;
+      font-size: 1.3rem;
+      font-weight: 400;
+      -webkit-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out; }
+      nav ul#navigation a i {
+        color: #37445e;
+        font-size: 2.5rem;
+        -webkit-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out; }
+      nav ul#navigation a:hover {
+        color: #9caac5; }
+        nav ul#navigation a:hover i {
+          color: #9caac5; }
+      nav ul#navigation a.active {
+        color: #9caac5; }
+        nav ul#navigation a.active i {
+          color: #9caac5; }
 
 body#main-p {
   height: auto;
@@ -399,7 +464,8 @@ div#main-p-bg {
   -webkit-animation: ring1a 60s ease-in-out infinite;
           animation: ring1a 60s ease-in-out infinite;
   -webkit-box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
-          box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15); }
+          box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
+  opacity: .5; }
 
 #ring2 {
   width: 200px;
@@ -422,6 +488,7 @@ div#main-p-bg {
           animation: ring2a 60s ease-in-out infinite;
   -webkit-box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
           box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
+  opacity: .5;
   -webkit-animation-delay: 2s;
           animation-delay: 2s; }
 
@@ -437,21 +504,22 @@ div#main-p-bg {
           animation-delay: 5s; }
 
 #ring5 {
-  width: 320px;
-  height: 320px;
-  top: -210px;
-  right: -150px;
+  width: 250px;
+  height: 250px;
+  top: -200px;
+  right: -70px;
   background-color: #A8B780;
   -webkit-box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
           box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.15);
   -webkit-animation: ring4a 30s ease-in-out infinite;
-          animation: ring4a 30s ease-in-out infinite; }
+          animation: ring4a 30s ease-in-out infinite;
+  opacity: .5; }
 
 #ring6 {
-  width: 300px;
-  height: 300px;
-  top: -250px;
-  right: -150px;
+  width: 200px;
+  height: 200px;
+  top: -180px;
+  right: -50px;
   background-color: #242D3E;
   -webkit-animation: ring4a 60s ease-in-out infinite;
           animation: ring4a 60s ease-in-out infinite;
@@ -463,8 +531,8 @@ div#main-p-bg {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0); }
   20% {
-    -webkit-transform: translate(-80px, 15px) scale(1.4);
-            transform: translate(-80px, 15px) scale(1.4); }
+    -webkit-transform: translate(-80px, 15px) scale(1.1);
+            transform: translate(-80px, 15px) scale(1.1); }
   50% {
     -webkit-transform: translate(-25px, 5px) scale(0.9);
             transform: translate(-25px, 5px) scale(0.9); }
@@ -480,8 +548,8 @@ div#main-p-bg {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0); }
   20% {
-    -webkit-transform: translate(-80px, 15px) scale(1.4);
-            transform: translate(-80px, 15px) scale(1.4); }
+    -webkit-transform: translate(-80px, 15px) scale(1.1);
+            transform: translate(-80px, 15px) scale(1.1); }
   50% {
     -webkit-transform: translate(-25px, 5px) scale(0.9);
             transform: translate(-25px, 5px) scale(0.9); }
@@ -497,14 +565,14 @@ div#main-p-bg {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0); }
   20% {
-    -webkit-transform: translate(-50px, 5px) scale(1.3);
-            transform: translate(-50px, 5px) scale(1.3); }
+    -webkit-transform: translate(-50px, 5px) scale(1.1);
+            transform: translate(-50px, 5px) scale(1.1); }
   50% {
     -webkit-transform: translate(-35px, 0px) scale(0.9);
             transform: translate(-35px, 0px) scale(0.9); }
   75% {
-    -webkit-transform: translate(30px, 40px) scale(1.2);
-            transform: translate(30px, 40px) scale(1.2); }
+    -webkit-transform: translate(30px, 40px) scale(1.1);
+            transform: translate(30px, 40px) scale(1.1); }
   90% {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0); } }
@@ -514,14 +582,14 @@ div#main-p-bg {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0); }
   20% {
-    -webkit-transform: translate(-50px, 5px) scale(1.3);
-            transform: translate(-50px, 5px) scale(1.3); }
+    -webkit-transform: translate(-50px, 5px) scale(1.1);
+            transform: translate(-50px, 5px) scale(1.1); }
   50% {
     -webkit-transform: translate(-35px, 0px) scale(0.9);
             transform: translate(-35px, 0px) scale(0.9); }
   75% {
-    -webkit-transform: translate(30px, 40px) scale(1.2);
-            transform: translate(30px, 40px) scale(1.2); }
+    -webkit-transform: translate(30px, 40px) scale(1.1);
+            transform: translate(30px, 40px) scale(1.1); }
   90% {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0); } }
@@ -565,8 +633,8 @@ div#main-p-bg {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0); }
   30% {
-    -webkit-transform: translate(-10px, 50px) scale(1.2);
-            transform: translate(-10px, 50px) scale(1.2); }
+    -webkit-transform: translate(-10px, 50px) scale(1.1);
+            transform: translate(-10px, 50px) scale(1.1); }
   50% {
     -webkit-transform: translate(25px, -30px) scale(0.9);
             transform: translate(25px, -30px) scale(0.9); }
@@ -582,8 +650,8 @@ div#main-p-bg {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0); }
   30% {
-    -webkit-transform: translate(-10px, 50px) scale(1.2);
-            transform: translate(-10px, 50px) scale(1.2); }
+    -webkit-transform: translate(-10px, 50px) scale(1.1);
+            transform: translate(-10px, 50px) scale(1.1); }
   50% {
     -webkit-transform: translate(25px, -30px) scale(0.9);
             transform: translate(25px, -30px) scale(0.9); }
@@ -668,6 +736,7 @@ div#main-p-bg {
             transform: rotate(-360deg); } }
 
 body#it-home {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -687,7 +756,8 @@ main#it-home {
       margin: auto; } }
   @media only screen and (min-device-width: 320px) and (max-device-width: 900px) and (orientation: landscape) {
     main#it-home {
-      width: 100%; } }
+      width: 100%;
+      padding-top: 40px; } }
 
 section.top-image {
   height: 365px;
@@ -700,6 +770,9 @@ section.top-image {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media (max-width: 500px) {
+    section.top-image {
+      height: 300px; } }
   section.top-image svg#virus {
     width: 500px;
     height: 100%; }
@@ -724,14 +797,14 @@ section.top-image {
                 transform: translate(22%, 25%); } }
     section.top-image g#virus-drops #drop1 {
       width: 14px;
-      -webkit-transform: translate(10px, 150px);
-              transform: translate(10px, 150px);
+      -webkit-transform: translate(10px, 130px);
+              transform: translate(10px, 130px);
       -webkit-animation: drop1 5s ease-in-out infinite;
               animation: drop1 5s ease-in-out infinite; }
     section.top-image g#virus-drops #drop2 {
       width: 8px;
-      -webkit-transform: translate(0px, 140px);
-              transform: translate(0px, 140px);
+      -webkit-transform: translate(0px, 130px);
+              transform: translate(0px, 130px);
       -webkit-animation: drop2 3s ease-in-out infinite;
               animation: drop2 3s ease-in-out infinite; }
     section.top-image g#virus-drops #drop3 {
@@ -789,13 +862,13 @@ section.top-image {
 
 @-webkit-keyframes drop2 {
   50% {
-    -webkit-transform: translate(0px, 145px);
-            transform: translate(0px, 145px); } }
+    -webkit-transform: translate(0px, 135px);
+            transform: translate(0px, 135px); } }
 
 @keyframes drop2 {
   50% {
-    -webkit-transform: translate(0px, 145px);
-            transform: translate(0px, 145px); } }
+    -webkit-transform: translate(0px, 135px);
+            transform: translate(0px, 135px); } }
 
 @-webkit-keyframes drop3 {
   50% {
@@ -883,17 +956,17 @@ section.content {
     section.content {
       font-size: 7rem; } }
   section.content h1 {
-    font-size: 8rem; }
+    font-size: 9rem; }
     @media (max-width: 500px) {
       section.content h1 {
         font-size: 7rem; } }
   section.content h2 {
-    font-size: 3.3rem; }
+    font-size: 3.5rem; }
     @media (max-width: 500px) {
       section.content h2 {
         font-size: 2.8rem; } }
   section.content h3 {
-    font-size: 3.3rem;
+    font-size: 2.2rem;
     margin: 15px 0 30px; }
     @media (max-width: 500px) {
       section.content h3 {

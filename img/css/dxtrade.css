@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'dxtrade';
-  src: url('../font/dxtrade.eot?18556264');
-  src: url('../font/dxtrade.eot?18556264#iefix') format('embedded-opentype'),
-       url('../font/dxtrade.woff2?18556264') format('woff2'),
-       url('../font/dxtrade.woff?18556264') format('woff'),
-       url('../font/dxtrade.ttf?18556264') format('truetype'),
-       url('../font/dxtrade.svg?18556264#dxtrade') format('svg');
+  src: url('../font/dxtrade.eot?25069666');
+  src: url('../font/dxtrade.eot?25069666#iefix') format('embedded-opentype'),
+       url('../font/dxtrade.woff2?25069666') format('woff2'),
+       url('../font/dxtrade.woff?25069666') format('woff'),
+       url('../font/dxtrade.ttf?25069666') format('truetype'),
+       url('../font/dxtrade.svg?25069666#dxtrade') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'dxtrade';
-    src: url('../font/dxtrade.svg?18556264#dxtrade') format('svg');
+    src: url('../font/dxtrade.svg?25069666#dxtrade') format('svg');
   }
 }
 */
@@ -56,14 +56,19 @@
 }
  
 .icon-webdev:before { content: '\e800'; } /* '' */
+.icon-arrow:before { content: '\e801'; } /* '' */
 .icon-backup:before { content: '\e802'; } /* '' */
-.icon-doc:before { content: '\e803'; } /* '' */
-.icon-email:before { content: '\e804'; } /* '' */
-.icon-geo:before { content: '\e805'; } /* '' */
-.icon-history:before { content: '\e806'; } /* '' */
-.icon-network:before { content: '\e807'; } /* '' */
-.icon-pc:before { content: '\e808'; } /* '' */
-.icon-phone:before { content: '\e809'; } /* '' */
-.icon-time:before { content: '\e80a'; } /* '' */
-.icon-virus:before { content: '\e80b'; } /* '' */
-.icon-arrow:before { content: '\e80c'; } /* '' */
+.icon-contact:before { content: '\e803'; } /* '' */
+.icon-delivery:before { content: '\e804'; } /* '' */
+.icon-doc:before { content: '\e805'; } /* '' */
+.icon-email:before { content: '\e806'; } /* '' */
+.icon-gear:before { content: '\e807'; } /* '' */
+.icon-geo:before { content: '\e808'; } /* '' */
+.icon-history:before { content: '\e809'; } /* '' */
+.icon-home:before { content: '\e80a'; } /* '' */
+.icon-network:before { content: '\e80b'; } /* '' */
+.icon-pc:before { content: '\e80c'; } /* '' */
+.icon-phone:before { content: '\e80d'; } /* '' */
+.icon-time:before { content: '\e80e'; } /* '' */
+.icon-virus:before { content: '\e80f'; } /* '' */
+.icon-wallet:before { content: '\e810'; } /* '' */

@@ -9,6 +9,7 @@ $violet: #67658D;
 $shadow: #000000;
 
 body#it-home {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,6 +27,7 @@ main#it-home {
     and (max-device-width: 900px)
     and (orientation: landscape) {
       width: 100%;
+      padding-top: 40px;
     }
 }
 section.top-image {
@@ -33,6 +35,9 @@ section.top-image {
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 500px) {
+    height: 300px;
+  }
   svg#virus {
     width: 500px;
     height: 100%;
@@ -55,12 +60,12 @@ section.top-image {
     }
     #drop1 {
       width: 14px;
-      transform: translate(10px, 150px);
+      transform: translate(10px, 130px);
       animation: drop1 5s ease-in-out infinite;
     }
     #drop2 {
       width: 8px;
-      transform: translate(0px, 140px);
+      transform: translate(0px, 130px);
       animation: drop2 3s ease-in-out infinite;
     }
     #drop3 {
@@ -105,7 +110,7 @@ section.top-image {
   50% {transform: translate(10px, 140px);}
 }
 @keyframes drop2 {
-  50% {transform: translate(0px, 145px);}
+  50% {transform: translate(0px, 135px);}
 }
 @keyframes drop3 {
   50% {transform: translate(25px, 30px);}
@@ -140,19 +145,19 @@ section.content {
     font-size: 7rem;
   }
   h1 {
-    font-size: 8rem;
+    font-size: 9rem;
     @media (max-width: 500px) {
       font-size: 7rem;
     }
   }
   h2 {
-    font-size: 3.3rem;
+    font-size: 3.5rem;
     @media (max-width: 500px) {
       font-size: 2.8rem;
     }
   }
   h3 {
-    font-size: 3.3rem;
+    font-size: 2.2rem;
     margin: 15px 0 30px;
     @media (max-width: 500px) {
       font-size: 1.7rem;
