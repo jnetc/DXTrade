@@ -35,12 +35,15 @@ section.top-image {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   @media (max-width: 500px) {
     height: 300px;
+    overflow: hidden;
   }
   svg#virus {
     width: 500px;
     height: 100%;
+    z-index: 50;
     @media (max-width: 500px) {
       width: 100%;
     }
@@ -133,8 +136,188 @@ section.top-image {
 @keyframes drop9 {
   50% {transform: translate(200px, 100px);}
 }
+  // INFECTED FILES
+.del-file {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  z-index: 1;
+  &::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    opacity: 1;
+    border-radius: 50%;
+    background: $body;
+  }
+  &::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    opacity: 1;
+    border-radius: 50%;
+    background: $body;
+  }
+}
+.infected {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: $text;
+  border-radius: 3px;
+  color: $body;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 5px 5px 15px rgba($shadow, .3);
+  z-index: 1;
+  &::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    border-style: solid;
+    border-color: transparent $body transparent transparent;
+    z-index: 10;
+  }
+  &:nth-of-type(1) {
+    width: 45px;
+    height: 65px;
+    top: -110px;
+    left: 15px;
+    animation: filefly 10s ease-in infinite;
+    .deleting {
+      @extend .del-file;
+      &::after {
+        animation: fileremove 10s cubic-bezier(1,-0.1, 0.76, 0.79) infinite;
+      }
+      &::before {
+        animation: fileremove 10s cubic-bezier(1, 0.07, 0.78, 0.96) infinite;
+      }
+    }
+    &::after {
+      border-width: 0 15px 15px 0;
+    }
+  }
+  &:nth-of-type(2) {
+    width: 20px;
+    height: 25px;
+    top:  -80px;
+    left: 95px;
+    font-size: .7rem;
+    border-radius: 1px;
+    animation: filefly 10s ease-in infinite;
+    animation-delay: 5s;
+    .deleting {
+      @extend .del-file;
+      &::after {
+        animation: fileremove 10s ease-in infinite;
+        animation-delay: 5s;
+      }
+      &::before {
+        animation: fileremove 10s cubic-bezier(1,-0.19, 0.98, 0.78) infinite;
+        animation-delay: 5s;
+      }
+    }
+    &::after {
+      border-width: 0 10px 10px 0;
+    }
+  }
+  &:nth-of-type(3) {
+    width: 30px;
+    height: 40px;
+    top:  -100px;
+    animation: filefly 10s ease-in infinite;
+    animation-delay: 8s;
+    font-size: 1.3rem;
+    .deleting {
+      @extend .del-file;
+      &::after {
+        animation: fileremove 10s cubic-bezier(0.25, 0.51, 0.51, 1.1) infinite;
+        animation-delay: 8s;
+      }
+      &::before {
+        animation: fileremove 10s cubic-bezier(0.07, 0.55, 0.79, 0.74) infinite;
+        animation-delay: 8s;
+      }
+    }
+    &::after {
+      border-width: 0 10px 10px 0;
+    }
+  }
+  &:nth-of-type(4) {
+    width: 25px;
+    height: 35px;
+    top:  -90px;
+    right: 100px;
+    font-size: 1.1rem;
+    border-radius: 2px;
+    animation: filefly 10s ease-in infinite;
+    animation-delay: 20s;
+    .deleting {
+      @extend .del-file;
+      &::after {
+        animation: fileremove 10s ease-in infinite;
+        animation-delay: 20s;
+      }
+      &::before {
+        animation: fileremove 10s cubic-bezier(1,-0.19, 0.98, 0.78) infinite;
+        animation-delay: 20s;
+      }
+    }
+    &::after {
+      border-width: 0 10px 10px 0;
+    }
+  }
+  &:nth-of-type(5) {
+    width: 45px;
+    height: 60px;
+    top:  -110px;
+    animation: filefly 10s ease-in infinite;
+    animation-delay: 13s;
+    right: 15px;
+    .deleting {
+      @extend .del-file;
+      &::after {
+        animation: fileremove 10s ease-in infinite;
+        animation-delay: 13s;
+      }
+      &::before {
+        animation: fileremove 10s cubic-bezier(1,-0.19, 0.98, 0.78) infinite;
+        animation-delay: 13s;
+      }
+    }
+    &::after {
+      border-width: 0 15px 15px 0;
+    }
+  }
+}
 
+@keyframes filefly {
+  0% {
+    transform: translateY(0px); opacity: 1;
+  }
+  68% {
+    transform: translateY(270px) ; opacity: 1;
+  }
+  69% { transform: translateY(300); opacity: 0;}
+  70% { transform: translateY(0); opacity: 0;}
+}
 
+@keyframes fileremove {
+  0% { transform: scale(0); }
+  40% { transform: scale(0);}
+  68% {transform: scale(23);}
+  70% { transform: scale(23);}
+}
 
 section.content {
   height: 55%;

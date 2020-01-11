@@ -208,7 +208,7 @@ a, button {
 
   // NНАВИГАЦИЯ ПО САЙТАМ
 nav {
-  width: 500px;
+  width: 501px;
   position: fixed;
   z-index: 1000;
   @media (max-width: 500px) {
@@ -217,7 +217,7 @@ nav {
       background: darken($body, 5);
     }
 
-  @media (min-width: 500px) {
+  @media (min-width: 501px) {
     top: 0;
     border-radius:  0 0 15px 15px;
     background: lighten($body, 3);

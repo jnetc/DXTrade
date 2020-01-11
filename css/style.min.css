@@ -207,7 +207,7 @@ a, button {
             transform: scale(0.93); }
 
 nav {
-  width: 500px;
+  width: 501px;
   position: fixed;
   z-index: 1000; }
   @media (max-width: 500px) {
@@ -215,7 +215,7 @@ nav {
       width: 100%;
       bottom: 0;
       background: #1b212e; } }
-  @media (min-width: 500px) {
+  @media (min-width: 501px) {
     nav {
       top: 0;
       border-radius: 0 0 15px 15px;
@@ -769,13 +769,16 @@ section.top-image {
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  position: relative; }
   @media (max-width: 500px) {
     section.top-image {
-      height: 300px; } }
+      height: 300px;
+      overflow: hidden; } }
   section.top-image svg#virus {
     width: 500px;
-    height: 100%; }
+    height: 100%;
+    z-index: 50; }
     @media (max-width: 500px) {
       section.top-image svg#virus {
         width: 100%; } }
@@ -939,6 +942,229 @@ section.top-image {
   50% {
     -webkit-transform: translate(200px, 100px);
             transform: translate(200px, 100px); } }
+
+.del-file, .infected:nth-of-type(1) .deleting, .infected:nth-of-type(2) .deleting, .infected:nth-of-type(3) .deleting, .infected:nth-of-type(4) .deleting, .infected:nth-of-type(5) .deleting {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  z-index: 1; }
+  .del-file::after, .infected:nth-of-type(1) .deleting::after, .infected:nth-of-type(2) .deleting::after, .infected:nth-of-type(3) .deleting::after, .infected:nth-of-type(4) .deleting::after, .infected:nth-of-type(5) .deleting::after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    opacity: 1;
+    border-radius: 50%;
+    background: #242D3E; }
+  .del-file::before, .infected:nth-of-type(1) .deleting::before, .infected:nth-of-type(2) .deleting::before, .infected:nth-of-type(3) .deleting::before, .infected:nth-of-type(4) .deleting::before, .infected:nth-of-type(5) .deleting::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    opacity: 1;
+    border-radius: 50%;
+    background: #242D3E; }
+
+.infected {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  background: #E6E6E6;
+  border-radius: 3px;
+  color: #242D3E;
+  font-size: 1.5rem;
+  font-weight: bold;
+  -webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1; }
+  .infected::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    border-style: solid;
+    border-color: transparent #242D3E transparent transparent;
+    z-index: 10; }
+  .infected:nth-of-type(1) {
+    width: 45px;
+    height: 65px;
+    top: -110px;
+    left: 15px;
+    -webkit-animation: filefly 10s ease-in infinite;
+            animation: filefly 10s ease-in infinite; }
+    .infected:nth-of-type(1) .deleting::after {
+      -webkit-animation: fileremove 10s cubic-bezier(1, -0.1, 0.76, 0.79) infinite;
+              animation: fileremove 10s cubic-bezier(1, -0.1, 0.76, 0.79) infinite; }
+    .infected:nth-of-type(1) .deleting::before {
+      -webkit-animation: fileremove 10s cubic-bezier(1, 0.07, 0.78, 0.96) infinite;
+              animation: fileremove 10s cubic-bezier(1, 0.07, 0.78, 0.96) infinite; }
+    .infected:nth-of-type(1)::after {
+      border-width: 0 15px 15px 0; }
+  .infected:nth-of-type(2) {
+    width: 20px;
+    height: 25px;
+    top: -80px;
+    left: 95px;
+    font-size: .7rem;
+    border-radius: 1px;
+    -webkit-animation: filefly 10s ease-in infinite;
+            animation: filefly 10s ease-in infinite;
+    -webkit-animation-delay: 5s;
+            animation-delay: 5s; }
+    .infected:nth-of-type(2) .deleting::after {
+      -webkit-animation: fileremove 10s ease-in infinite;
+              animation: fileremove 10s ease-in infinite;
+      -webkit-animation-delay: 5s;
+              animation-delay: 5s; }
+    .infected:nth-of-type(2) .deleting::before {
+      -webkit-animation: fileremove 10s cubic-bezier(1, -0.19, 0.98, 0.78) infinite;
+              animation: fileremove 10s cubic-bezier(1, -0.19, 0.98, 0.78) infinite;
+      -webkit-animation-delay: 5s;
+              animation-delay: 5s; }
+    .infected:nth-of-type(2)::after {
+      border-width: 0 10px 10px 0; }
+  .infected:nth-of-type(3) {
+    width: 30px;
+    height: 40px;
+    top: -100px;
+    -webkit-animation: filefly 10s ease-in infinite;
+            animation: filefly 10s ease-in infinite;
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
+    font-size: 1.3rem; }
+    .infected:nth-of-type(3) .deleting::after {
+      -webkit-animation: fileremove 10s cubic-bezier(0.25, 0.51, 0.51, 1.1) infinite;
+              animation: fileremove 10s cubic-bezier(0.25, 0.51, 0.51, 1.1) infinite;
+      -webkit-animation-delay: 8s;
+              animation-delay: 8s; }
+    .infected:nth-of-type(3) .deleting::before {
+      -webkit-animation: fileremove 10s cubic-bezier(0.07, 0.55, 0.79, 0.74) infinite;
+              animation: fileremove 10s cubic-bezier(0.07, 0.55, 0.79, 0.74) infinite;
+      -webkit-animation-delay: 8s;
+              animation-delay: 8s; }
+    .infected:nth-of-type(3)::after {
+      border-width: 0 10px 10px 0; }
+  .infected:nth-of-type(4) {
+    width: 25px;
+    height: 35px;
+    top: -90px;
+    right: 100px;
+    font-size: 1.1rem;
+    border-radius: 2px;
+    -webkit-animation: filefly 10s ease-in infinite;
+            animation: filefly 10s ease-in infinite;
+    -webkit-animation-delay: 20s;
+            animation-delay: 20s; }
+    .infected:nth-of-type(4) .deleting::after {
+      -webkit-animation: fileremove 10s ease-in infinite;
+              animation: fileremove 10s ease-in infinite;
+      -webkit-animation-delay: 20s;
+              animation-delay: 20s; }
+    .infected:nth-of-type(4) .deleting::before {
+      -webkit-animation: fileremove 10s cubic-bezier(1, -0.19, 0.98, 0.78) infinite;
+              animation: fileremove 10s cubic-bezier(1, -0.19, 0.98, 0.78) infinite;
+      -webkit-animation-delay: 20s;
+              animation-delay: 20s; }
+    .infected:nth-of-type(4)::after {
+      border-width: 0 10px 10px 0; }
+  .infected:nth-of-type(5) {
+    width: 45px;
+    height: 60px;
+    top: -110px;
+    -webkit-animation: filefly 10s ease-in infinite;
+            animation: filefly 10s ease-in infinite;
+    -webkit-animation-delay: 13s;
+            animation-delay: 13s;
+    right: 15px; }
+    .infected:nth-of-type(5) .deleting::after {
+      -webkit-animation: fileremove 10s ease-in infinite;
+              animation: fileremove 10s ease-in infinite;
+      -webkit-animation-delay: 13s;
+              animation-delay: 13s; }
+    .infected:nth-of-type(5) .deleting::before {
+      -webkit-animation: fileremove 10s cubic-bezier(1, -0.19, 0.98, 0.78) infinite;
+              animation: fileremove 10s cubic-bezier(1, -0.19, 0.98, 0.78) infinite;
+      -webkit-animation-delay: 13s;
+              animation-delay: 13s; }
+    .infected:nth-of-type(5)::after {
+      border-width: 0 15px 15px 0; }
+
+@-webkit-keyframes filefly {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1; }
+  68% {
+    -webkit-transform: translateY(270px);
+            transform: translateY(270px);
+    opacity: 1; }
+  69% {
+    -webkit-transform: translateY(300);
+            transform: translateY(300);
+    opacity: 0; }
+  70% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0; } }
+
+@keyframes filefly {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1; }
+  68% {
+    -webkit-transform: translateY(270px);
+            transform: translateY(270px);
+    opacity: 1; }
+  69% {
+    -webkit-transform: translateY(300);
+            transform: translateY(300);
+    opacity: 0; }
+  70% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 0; } }
+
+@-webkit-keyframes fileremove {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  40% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  68% {
+    -webkit-transform: scale(23);
+            transform: scale(23); }
+  70% {
+    -webkit-transform: scale(23);
+            transform: scale(23); } }
+
+@keyframes fileremove {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  40% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  68% {
+    -webkit-transform: scale(23);
+            transform: scale(23); }
+  70% {
+    -webkit-transform: scale(23);
+            transform: scale(23); } }
 
 section.content {
   height: 55%;
