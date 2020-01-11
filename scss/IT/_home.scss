@@ -50,20 +50,21 @@ section.top-image {
   }
   image#monster-monster {
     width: 215px;
-    height: auto;
-    position: relative;
+    height: 220px;
     transform: translate(25%, 25%) scale(1.2);
     @media (max-width: 500px) {
       width: 215px;
-      height: auto;
-      position: relative;
+      height: 220px;
       transform: translate(22%, 25%);
     }
   }
   g#monster-drops {
+    width: 215px;
+    height: 100%;
     transform: translate(25%, 25%) scale(1.2);
     @media (max-width: 500px) {
       width: 215px;
+      height: 100%;
       transform: translate(22%, 25%);
     }
     #drop1 {
