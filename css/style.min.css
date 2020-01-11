@@ -209,17 +209,17 @@ a, button {
 nav {
   width: 501px;
   position: fixed;
+  background: -webkit-gradient(linear, left bottom, left top, from(#242D3E), to(#283244));
+  background: linear-gradient(to top, #242D3E 0%, #283244);
   z-index: 1000; }
   @media (max-width: 500px) {
     nav {
       width: 100%;
-      bottom: 0;
-      background: #1b212e; } }
+      bottom: 0; } }
   @media (min-width: 501px) {
     nav {
       top: 0;
       border-radius: 0 0 15px 15px;
-      background: #2a3448;
       -webkit-box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.3);
               box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.3); } }
   nav ul#navigation {
@@ -775,78 +775,78 @@ section.top-image {
     section.top-image {
       height: 300px;
       overflow: hidden; } }
-  section.top-image svg#virus {
+  section.top-image svg#monster {
     width: 500px;
     height: 100%;
     z-index: 50; }
     @media (max-width: 500px) {
-      section.top-image svg#virus {
+      section.top-image svg#monster {
         width: 100%; } }
-  section.top-image image#virus-monster {
+  section.top-image image#monster-monster {
     -webkit-transform: translate(25%, 25%) scale(1.6);
             transform: translate(25%, 25%) scale(1.6); }
     @media (max-width: 500px) {
-      section.top-image image#virus-monster {
+      section.top-image image#monster-monster {
         width: 215px;
         -webkit-transform: translate(22%, 25%);
                 transform: translate(22%, 25%); } }
-  section.top-image g#virus-drops {
+  section.top-image g#monster-drops {
     -webkit-transform: translate(25%, 25%) scale(1.2);
             transform: translate(25%, 25%) scale(1.2); }
     @media (max-width: 500px) {
-      section.top-image g#virus-drops {
+      section.top-image g#monster-drops {
         width: 215px;
         -webkit-transform: translate(22%, 25%);
                 transform: translate(22%, 25%); } }
-    section.top-image g#virus-drops #drop1 {
+    section.top-image g#monster-drops #drop1 {
       width: 14px;
       -webkit-transform: translate(10px, 130px);
               transform: translate(10px, 130px);
       -webkit-animation: drop1 5s ease-in-out infinite;
               animation: drop1 5s ease-in-out infinite; }
-    section.top-image g#virus-drops #drop2 {
+    section.top-image g#monster-drops #drop2 {
       width: 8px;
       -webkit-transform: translate(0px, 130px);
               transform: translate(0px, 130px);
       -webkit-animation: drop2 3s ease-in-out infinite;
               animation: drop2 3s ease-in-out infinite; }
-    section.top-image g#virus-drops #drop3 {
+    section.top-image g#monster-drops #drop3 {
       width: 8px;
       -webkit-transform: translate(25px, 20px);
               transform: translate(25px, 20px);
       -webkit-animation: drop3 5s ease-in-out infinite;
               animation: drop3 5s ease-in-out infinite; }
-    section.top-image g#virus-drops #drop4 {
+    section.top-image g#monster-drops #drop4 {
       width: 10px;
       -webkit-transform: translate(110px, -20px);
               transform: translate(110px, -20px);
       -webkit-animation: drop4 4s ease-in-out infinite;
               animation: drop4 4s ease-in-out infinite; }
-    section.top-image g#virus-drops #drop5 {
+    section.top-image g#monster-drops #drop5 {
       width: 6px;
       -webkit-transform: translate(125px, -5px);
               transform: translate(125px, -5px);
       -webkit-animation: drop5 6s ease-in-out infinite;
               animation: drop5 6s ease-in-out infinite; }
-    section.top-image g#virus-drops #drop6 {
+    section.top-image g#monster-drops #drop6 {
       width: 7px;
       -webkit-transform: translate(180px, 0px);
               transform: translate(180px, 0px);
       -webkit-animation: drop6 7s ease-in-out infinite;
               animation: drop6 7s ease-in-out infinite; }
-    section.top-image g#virus-drops #drop7 {
+    section.top-image g#monster-drops #drop7 {
       width: 5px;
       -webkit-transform: translate(160px, 30px);
               transform: translate(160px, 30px);
       -webkit-animation: drop7 3s ease-in-out infinite;
               animation: drop7 3s ease-in-out infinite; }
-    section.top-image g#virus-drops #drop8 {
+    section.top-image g#monster-drops #drop8 {
       width: 10px;
       -webkit-transform: translate(185px, 80px);
               transform: translate(185px, 80px);
       -webkit-animation: drop8 4s ease-in-out infinite;
               animation: drop8 4s ease-in-out infinite; }
-    section.top-image g#virus-drops #drop9 {
+    section.top-image g#monster-drops #drop9 {
       width: 14px;
       -webkit-transform: translate(200px, 110px);
               transform: translate(200px, 110px);
@@ -982,6 +982,7 @@ section.top-image {
   position: absolute;
   background: #E6E6E6;
   border-radius: 3px;
+  opacity: 0;
   color: #242D3E;
   font-size: 1.5rem;
   font-weight: bold;
@@ -999,8 +1000,8 @@ section.top-image {
     border-color: transparent #242D3E transparent transparent;
     z-index: 10; }
   .infected:nth-of-type(1) {
-    width: 45px;
-    height: 65px;
+    width: 40px;
+    height: 60px;
     top: -110px;
     left: 15px;
     -webkit-animation: filefly 10s ease-in infinite;
@@ -1022,18 +1023,18 @@ section.top-image {
     border-radius: 1px;
     -webkit-animation: filefly 10s ease-in infinite;
             animation: filefly 10s ease-in infinite;
-    -webkit-animation-delay: 5s;
-            animation-delay: 5s; }
+    -webkit-animation-delay: 4s;
+            animation-delay: 4s; }
     .infected:nth-of-type(2) .deleting::after {
       -webkit-animation: fileremove 10s ease-in infinite;
               animation: fileremove 10s ease-in infinite;
-      -webkit-animation-delay: 5s;
-              animation-delay: 5s; }
+      -webkit-animation-delay: 4s;
+              animation-delay: 4s; }
     .infected:nth-of-type(2) .deleting::before {
       -webkit-animation: fileremove 10s cubic-bezier(1, -0.19, 0.98, 0.78) infinite;
               animation: fileremove 10s cubic-bezier(1, -0.19, 0.98, 0.78) infinite;
-      -webkit-animation-delay: 5s;
-              animation-delay: 5s; }
+      -webkit-animation-delay: 4s;
+              animation-delay: 4s; }
     .infected:nth-of-type(2)::after {
       border-width: 0 10px 10px 0; }
   .infected:nth-of-type(3) {
@@ -1042,19 +1043,19 @@ section.top-image {
     top: -100px;
     -webkit-animation: filefly 10s ease-in infinite;
             animation: filefly 10s ease-in infinite;
-    -webkit-animation-delay: 8s;
-            animation-delay: 8s;
+    -webkit-animation-delay: 12s;
+            animation-delay: 12s;
     font-size: 1.3rem; }
     .infected:nth-of-type(3) .deleting::after {
       -webkit-animation: fileremove 10s cubic-bezier(0.25, 0.51, 0.51, 1.1) infinite;
               animation: fileremove 10s cubic-bezier(0.25, 0.51, 0.51, 1.1) infinite;
-      -webkit-animation-delay: 8s;
-              animation-delay: 8s; }
+      -webkit-animation-delay: 12s;
+              animation-delay: 12s; }
     .infected:nth-of-type(3) .deleting::before {
       -webkit-animation: fileremove 10s cubic-bezier(0.07, 0.55, 0.79, 0.74) infinite;
               animation: fileremove 10s cubic-bezier(0.07, 0.55, 0.79, 0.74) infinite;
-      -webkit-animation-delay: 8s;
-              animation-delay: 8s; }
+      -webkit-animation-delay: 12s;
+              animation-delay: 12s; }
     .infected:nth-of-type(3)::after {
       border-width: 0 10px 10px 0; }
   .infected:nth-of-type(4) {
@@ -1066,18 +1067,18 @@ section.top-image {
     border-radius: 2px;
     -webkit-animation: filefly 10s ease-in infinite;
             animation: filefly 10s ease-in infinite;
-    -webkit-animation-delay: 20s;
-            animation-delay: 20s; }
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s; }
     .infected:nth-of-type(4) .deleting::after {
       -webkit-animation: fileremove 10s ease-in infinite;
               animation: fileremove 10s ease-in infinite;
-      -webkit-animation-delay: 20s;
-              animation-delay: 20s; }
+      -webkit-animation-delay: 8s;
+              animation-delay: 8s; }
     .infected:nth-of-type(4) .deleting::before {
       -webkit-animation: fileremove 10s cubic-bezier(1, -0.19, 0.98, 0.78) infinite;
               animation: fileremove 10s cubic-bezier(1, -0.19, 0.98, 0.78) infinite;
-      -webkit-animation-delay: 20s;
-              animation-delay: 20s; }
+      -webkit-animation-delay: 8s;
+              animation-delay: 8s; }
     .infected:nth-of-type(4)::after {
       border-width: 0 10px 10px 0; }
   .infected:nth-of-type(5) {
@@ -1086,24 +1087,28 @@ section.top-image {
     top: -110px;
     -webkit-animation: filefly 10s ease-in infinite;
             animation: filefly 10s ease-in infinite;
-    -webkit-animation-delay: 13s;
-            animation-delay: 13s;
+    -webkit-animation-delay: 16s;
+            animation-delay: 16s;
     right: 15px; }
     .infected:nth-of-type(5) .deleting::after {
       -webkit-animation: fileremove 10s ease-in infinite;
               animation: fileremove 10s ease-in infinite;
-      -webkit-animation-delay: 13s;
-              animation-delay: 13s; }
+      -webkit-animation-delay: 16s;
+              animation-delay: 16s; }
     .infected:nth-of-type(5) .deleting::before {
       -webkit-animation: fileremove 10s cubic-bezier(1, -0.19, 0.98, 0.78) infinite;
               animation: fileremove 10s cubic-bezier(1, -0.19, 0.98, 0.78) infinite;
-      -webkit-animation-delay: 13s;
-              animation-delay: 13s; }
+      -webkit-animation-delay: 16s;
+              animation-delay: 16s; }
     .infected:nth-of-type(5)::after {
       border-width: 0 15px 15px 0; }
 
 @-webkit-keyframes filefly {
   0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 0; }
+  5% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
     opacity: 1; }
@@ -1122,6 +1127,10 @@ section.top-image {
 
 @keyframes filefly {
   0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 0; }
+  5% {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
     opacity: 1; }

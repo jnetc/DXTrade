@@ -210,17 +210,19 @@ a, button {
 nav {
   width: 501px;
   position: fixed;
+  background: linear-gradient(to top, $body 0%, lighten($body, 2));
   z-index: 1000;
   @media (max-width: 500px) {
       width: 100%;
       bottom: 0;
-      background: darken($body, 5);
+      // background: darken($body, 5);
+      // background: linear-gradient(to top, $body 0%, darken($body, 3));
+      // box-shadow: 0px -10px 15px rgba($shadow, .2);
     }
 
   @media (min-width: 501px) {
     top: 0;
     border-radius:  0 0 15px 15px;
-    background: lighten($body, 3);
     box-shadow: 5px 15px 15px rgba($shadow, .3);
   }
   ul#navigation {
