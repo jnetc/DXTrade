@@ -783,11 +783,16 @@ section.top-image {
       section.top-image svg#monster {
         width: 100%; } }
   section.top-image image#monster-monster {
-    -webkit-transform: translate(25%, 25%) scale(1.6);
-            transform: translate(25%, 25%) scale(1.6); }
+    width: 215px;
+    height: auto;
+    position: relative;
+    -webkit-transform: translate(25%, 25%) scale(1.2);
+            transform: translate(25%, 25%) scale(1.2); }
     @media (max-width: 500px) {
       section.top-image image#monster-monster {
         width: 215px;
+        height: auto;
+        position: relative;
         -webkit-transform: translate(22%, 25%);
                 transform: translate(22%, 25%); } }
   section.top-image g#monster-drops {

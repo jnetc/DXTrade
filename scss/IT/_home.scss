@@ -49,9 +49,14 @@ section.top-image {
     }
   }
   image#monster-monster {
-    transform: translate(25%, 25%) scale(1.6);
+    width: 215px;
+    height: auto;
+    position: relative;
+    transform: translate(25%, 25%) scale(1.2);
     @media (max-width: 500px) {
       width: 215px;
+      height: auto;
+      position: relative;
       transform: translate(22%, 25%);
     }
   }
