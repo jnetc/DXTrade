@@ -108,8 +108,50 @@ a, button {
   font-size: 1.6rem;
   text-transform: uppercase;
   letter-spacing: 1.2px; }
+  .link-btn div.icon-bt {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    border-radius: 50%;
+    background: #A8B780;
+    -webkit-box-shadow: inset 1px 3px 5px rgba(0, 0, 0, 0.4), 0 0 3px 1px rgba(86, 93, 109, 0.9);
+            box-shadow: inset 1px 3px 5px rgba(0, 0, 0, 0.4), 0 0 3px 1px rgba(86, 93, 109, 0.9);
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    z-index: 1; }
+    .link-btn div.icon-bt::after {
+      content: '';
+      width: inherit;
+      height: inherit;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      border-radius: 50%;
+      -webkit-box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9);
+              box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9);
+      z-index: -2; }
+    .link-btn div.icon-bt::before {
+      content: '';
+      width: inherit;
+      height: inherit;
+      position: absolute;
+      top: 0px;
+      left: -3px;
+      border-radius: 50%;
+      -webkit-animation: callphone 3s ease-in-out infinite;
+              animation: callphone 3s ease-in-out infinite;
+      z-index: -5; }
+  .link-btn i {
+    position: absolute;
+    top: 3px;
+    left: 2px;
+    font-size: 2.6rem;
+    color: #1b212e; }
 
 .it-btn {
+  height: 100px;
   padding: 25px 25px 25px 70px;
   position: relative;
   font-size: 1.8rem;
