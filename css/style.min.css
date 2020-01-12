@@ -103,14 +103,12 @@ a, button {
     z-index: -1; }
 
 .link-btn {
-  display: inline-block;
   padding: 16px 35px;
   font-size: 1.6rem;
   text-transform: uppercase;
   letter-spacing: 1.2px; }
 
 .it-btn {
-  display: inline-block;
   padding: 25px 35px 25px 70px;
   font-size: 1.6rem;
   text-transform: uppercase;
