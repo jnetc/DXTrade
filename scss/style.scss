@@ -129,10 +129,8 @@ a, button {
 }
   // Широкая кнопка
 .it-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 15px 25px;
+  padding: 25px 25px 25px 70px;
+  position: relative;
   font-size: 1.8rem;
   text-transform: uppercase;
   letter-spacing: 1.2px;
@@ -144,14 +142,15 @@ a, button {
   div.icon-bt {
     width: 40px;
     height: 40px;
-    position: relative;
-    top: -1px;
-    left: -9px;
+    position: absolute;
+    top: 50%;
+    left: 15px;
     border-radius: 50%;
     background: $green;
     box-shadow: 
       inset 1px 3px 5px rgba($shadow, .4),
       0 0 3px 1px rgba($border, .9);
+      transform: translateY(-50%);
     z-index: 1;
     &::after {
       content: '';
