@@ -40,107 +40,183 @@ section.top-image {
     height: 300px;
     overflow: hidden;
   }
-  svg#monster {
-    width: 500px;
-    height: 100%;
+  // svg#monster {
+  //   width: 500px;
+  //   height: 100%;
+  //   z-index: 50;
+  //   @media (max-width: 500px) {
+  //     width: 100%;
+  //   }
+  // }
+  // image#monster-monster {
+  //   width: 215px;
+  //   height: 220px;
+  //   transform: translate(25%, 25%) scale(1.2);
+  //   @media (max-width: 500px) {
+  //     width: 215px;
+  //     height: 220px;
+  //     transform: translate(22%, 25%);
+  //   }
+  // }
+  // img#monster {
+  //   width: 215px;
+  //   position: absolute;
+  //   bottom: 30px;
+  //   transform: scale(1.3);
+  //   z-index: 50;
+  //   @media (max-width: 500px) {
+  //     transform: scale(1);
+  //   }
+  // }
+  img#virus {
+    height: 240px;
+    position: absolute;
+    bottom: 20px;
+    // transform: scale(1.2);
     z-index: 50;
+    animation: virus 7s ease-in-out infinite;
     @media (max-width: 500px) {
-      width: 100%;
+      bottom: 25px;
+      height: 200px;
     }
   }
-  image#monster-monster {
-    width: 215px;
-    height: 220px;
-    transform: translate(25%, 25%) scale(1.2);
+  div#virus-shadow {
+    width: 220px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border-radius: 50%;
+    transform: translateX(-50%) scale(1);
+    background: darken($body, 8);
+    z-index: 48;
+    animation: virus-shadow 7s ease-in-out infinite;
     @media (max-width: 500px) {
-      width: 215px;
-      height: 220px;
-      transform: translate(22%, 25%);
+      width: 190px;
     }
   }
-  g#monster-drops {
-    width: 215px;
-    height: 100%;
-    transform: translate(25%, 25%) scale(1.2);
+
+  div#virus-drops {
+    width: 255px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) scale(1.3);
+    z-index: 49;
     @media (max-width: 500px) {
-      width: 215px;
+      width: 255px;
       height: 100%;
-      transform: translate(22%, 25%);
+      transform: translateX(-50%);
     }
     #drop1 {
       width: 14px;
-      transform: translate(10px, 130px);
+      transform: translate(10px, 210px) scale(.9);
       animation: drop1 5s ease-in-out infinite;
+      @media (max-width: 500px) {
+        width: 14px;
+      }
     }
     #drop2 {
       width: 8px;
-      transform: translate(0px, 130px);
+      transform: translate(-15px, 190px) scale(.9);
       animation: drop2 3s ease-in-out infinite;
+      @media (max-width: 500px) {
+        width: 8px;
+      }
     }
     #drop3 {
       width: 8px;
-      transform: translate(25px, 20px);
+      transform: translate(-5px, 80px) scale(.9);
       animation: drop3 5s ease-in-out infinite;
+      @media (max-width: 500px) {
+        width: 8px;
+      }
     }
     #drop4 {
       width: 10px;
-      transform: translate(110px, -20px);
+      transform: translate(70px, 35px) scale(.9);
       animation: drop4 4s ease-in-out infinite;
+      @media (max-width: 500px) {
+        width: 10px;
+      }
     }
     #drop5 {
       width: 6px;
-      transform: translate(125px, -5px);
+      transform: translate(80px, 25px) scale(.9);
       animation: drop5 6s ease-in-out infinite;
+      @media (max-width: 500px) {
+        width: 6px;
+      }
     }
     #drop6 {
       width: 7px;
-      transform: translate(180px, 0px);
+      transform: translate(120px, 50px) scale(.9);
       animation: drop6 7s ease-in-out infinite;
+      @media (max-width: 500px) {
+        width: 7px;
+      }
     }
     #drop7 {
       width: 5px;
-      transform: translate(160px, 30px);
+      transform: translate(150px, 130px) scale(.9);
       animation: drop7 3s ease-in-out infinite;
+      @media (max-width: 500px) {
+        width: 5px;
+      }
     }
     #drop8 {
       width: 10px;
-      transform: translate(185px, 80px);
+      transform: translate(135px, 160px) scale(.9);
       animation: drop8 4s ease-in-out infinite;
+      @media (max-width: 500px) {
+        width: 10px;
+      }
     }
     #drop9 {
       width: 14px;
-      transform: translate(200px, 110px);
+      transform: translate(135px, 170px) scale(.9);
       animation: drop9 7s ease-in-out infinite;
+      @media (max-width: 500px) {
+        width: 14px;
+      }
     }
   }
 }
 
+@keyframes virus {
+  50% {transform: translate(0px, 5px);}
+}
+@keyframes virus-shadow {
+  50% {transform: translateX(-50%) scale(1.1)}
+}
+
 @keyframes drop1 {
-  50% {transform: translate(10px, 140px);}
+  50% {transform: translate(10px, 200px);}
 }
 @keyframes drop2 {
-  50% {transform: translate(0px, 135px);}
+  50% {transform: translate(-15px, 185px);}
 }
 @keyframes drop3 {
-  50% {transform: translate(25px, 30px);}
+  50% {transform: translate(-5px, 70px);}
 }
 @keyframes drop4 {
-  50% {transform: translate(110px, -5px);}
+  50% {transform: translate(70px, 45px);}
 }
 @keyframes drop5 {
-  50% {transform: translate(125px, -15px);}
+  50% {transform: translate(80px, 35px);}
 }
 @keyframes drop6 {
-  50% {transform: translate(180px, -10px);}
+  50% {transform: translate(120px, 45px);}
 }
 @keyframes drop7 {
-  50% {transform: translate(160px, 20px);}
+  50% {transform: translate(150px, 120px);}
 }
 @keyframes drop8 {
-  50% {transform: translate(185px, 90px);}
+  50% {transform: translate(135px, 150px);}
 }
 @keyframes drop9 {
-  50% {transform: translate(200px, 100px);}
+  50% {transform: translate(135px, 180px);}
 }
   // INFECTED FILES
 .del-file {
