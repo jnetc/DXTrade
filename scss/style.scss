@@ -48,6 +48,12 @@ a {
   text-decoration: none;
   color: $text;
   cursor: pointer;
+  &:visited {
+    color: transparent;
+  }
+  &:active {
+    color: transparent;
+  }
 }
 
 button {

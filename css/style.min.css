@@ -32,6 +32,10 @@ a {
   text-decoration: none;
   color: #E6E6E6;
   cursor: pointer; }
+  a:visited {
+    color: transparent; }
+  a:active {
+    color: transparent; }
 
 button {
   outline: none; }
