@@ -25,7 +25,11 @@ img#laptop {
   width: 320px;
   position: absolute;
   bottom: 50px;
+  transform: scale(1.2);
   z-index: 50;
+  @media (max-width: 500px) {
+    transform: scale(1);
+  }
 }
 div#circle-gear {
   width: 320px;
@@ -33,8 +37,92 @@ div#circle-gear {
   position: absolute;
   border-radius: 50%;
   background: darken($body, 5);
+  transform: scale(1.2);
   z-index: -1;
+  @media (max-width: 500px) {
+    transform: scale(1);
+  }
+  img{
+    position: absolute;
+  }
+  img:nth-of-type(1) {
+    top: 40px;
+    left: 220px;
+    animation: gear 5s linear infinite;
+  }
+  img:nth-of-type(2) {
+    width: 40px;
+    height: 40px;
+    top: 140px;
+    left: 50px;
+    animation: gear 15s linear infinite;
+  }
+  img:nth-of-type(3) {
+    width: 60px;
+    height: 60px;
+    top: 10px;
+    left: 125px;
+    animation: gear 10s linear infinite;
+  }
+  img:nth-of-type(4) {
+    top: 110px;
+    left: 230px;
+    animation: gear 5s linear infinite;
+  }
+  img:nth-of-type(5) {
+    top: 75px;
+    left: 115px;
+    animation: gearBack 15s linear infinite;
+  }
+  img:nth-of-type(6) {
+    top: 0px;
+    left: 20px;
+    animation: gear 25s linear infinite;
+  }
+  img:nth-of-type(7) {
+    width: 65px;
+    height: 65px;
+    top: 60px;
+    left: 165px;
+    animation: gear 15s linear infinite;
+  }
+  img:nth-of-type(8) {
+    width: 55px;
+    height: 55px;
+    top: 100px;
+    left: 300px;
+    animation: gear 5s linear infinite;
+  }
+  img:nth-of-type(9) {
+    top: 70px;
+    left: 265px;
+    animation: gearBack 8s linear infinite;
+  }
 }
+
+@keyframes gear {
+  100% {transform: rotate(360deg);  }
+}
+@keyframes gearBack {
+  100% {transform: rotate(-360deg);  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 h1.service {
   margin: 35px 0;
