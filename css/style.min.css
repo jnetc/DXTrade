@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+          box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; }
 
 html {
   font-size: 62.5%;
@@ -43,9 +44,6 @@ h1, h2, h3, h4, h5, button, a {
 
 p, span {
   font-weight: 300; }
-
-a, button {
-  -webkit-tap-highlight-color: transparent; }
 
 .btn, .link-btn, .circle-btn, .main-phone-btn,
 .main-email-btn, .main-geo-btn {
@@ -727,7 +725,7 @@ div#main-p-bg {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg); } }
 
-body#it-home {
+body#it {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -738,20 +736,19 @@ body#it-home {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  body#it main {
+    height: 100%; }
+    @media only screen and (min-width: 500px) {
+      body#it main {
+        width: 500px;
+        max-height: 800px;
+        margin: auto; } }
+    @media only screen and (min-device-width: 320px) and (max-device-width: 900px) and (orientation: landscape) {
+      body#it main {
+        width: 100%;
+        padding-top: 40px; } }
 
-main#it-home {
-  height: 100%; }
-  @media only screen and (min-width: 500px) {
-    main#it-home {
-      width: 500px;
-      max-height: 800px;
-      margin: auto; } }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 900px) and (orientation: landscape) {
-    main#it-home {
-      width: 100%;
-      padding-top: 40px; } }
-
-section.top-image {
+section.virus-image {
   height: 365px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -762,12 +759,13 @@ section.top-image {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative; }
+  position: relative;
+  z-index: 15; }
   @media (max-width: 500px) {
-    section.top-image {
+    section.virus-image {
       height: 300px;
       overflow: hidden; } }
-  section.top-image img#virus {
+  section.virus-image img#virus {
     height: 240px;
     position: absolute;
     bottom: 20px;
@@ -775,10 +773,10 @@ section.top-image {
     -webkit-animation: virus 7s ease-in-out infinite;
             animation: virus 7s ease-in-out infinite; }
     @media (max-width: 500px) {
-      section.top-image img#virus {
+      section.virus-image img#virus {
         bottom: 25px;
         height: 200px; } }
-  section.top-image div#virus-shadow {
+  section.virus-image div#virus-shadow {
     width: 220px;
     height: 30px;
     position: absolute;
@@ -792,9 +790,9 @@ section.top-image {
     -webkit-animation: virus-shadow 7s ease-in-out infinite;
             animation: virus-shadow 7s ease-in-out infinite; }
     @media (max-width: 500px) {
-      section.top-image div#virus-shadow {
+      section.virus-image div#virus-shadow {
         width: 190px; } }
-  section.top-image div#virus-drops {
+  section.virus-image div#virus-drops {
     width: 255px;
     height: 300px;
     position: absolute;
@@ -804,91 +802,91 @@ section.top-image {
             transform: translateX(-50%) scale(1.3);
     z-index: 49; }
     @media (max-width: 500px) {
-      section.top-image div#virus-drops {
+      section.virus-image div#virus-drops {
         width: 255px;
         height: 100%;
         -webkit-transform: translateX(-50%);
                 transform: translateX(-50%); } }
-    section.top-image div#virus-drops #drop1 {
+    section.virus-image div#virus-drops #drop1 {
       width: 14px;
       -webkit-transform: translate(10px, 210px) scale(0.9);
               transform: translate(10px, 210px) scale(0.9);
       -webkit-animation: drop1 5s ease-in-out infinite;
               animation: drop1 5s ease-in-out infinite; }
       @media (max-width: 500px) {
-        section.top-image div#virus-drops #drop1 {
+        section.virus-image div#virus-drops #drop1 {
           width: 14px; } }
-    section.top-image div#virus-drops #drop2 {
+    section.virus-image div#virus-drops #drop2 {
       width: 8px;
       -webkit-transform: translate(-15px, 190px) scale(0.9);
               transform: translate(-15px, 190px) scale(0.9);
       -webkit-animation: drop2 3s ease-in-out infinite;
               animation: drop2 3s ease-in-out infinite; }
       @media (max-width: 500px) {
-        section.top-image div#virus-drops #drop2 {
+        section.virus-image div#virus-drops #drop2 {
           width: 8px; } }
-    section.top-image div#virus-drops #drop3 {
+    section.virus-image div#virus-drops #drop3 {
       width: 8px;
       -webkit-transform: translate(-5px, 80px) scale(0.9);
               transform: translate(-5px, 80px) scale(0.9);
       -webkit-animation: drop3 5s ease-in-out infinite;
               animation: drop3 5s ease-in-out infinite; }
       @media (max-width: 500px) {
-        section.top-image div#virus-drops #drop3 {
+        section.virus-image div#virus-drops #drop3 {
           width: 8px; } }
-    section.top-image div#virus-drops #drop4 {
+    section.virus-image div#virus-drops #drop4 {
       width: 10px;
       -webkit-transform: translate(70px, 35px) scale(0.9);
               transform: translate(70px, 35px) scale(0.9);
       -webkit-animation: drop4 4s ease-in-out infinite;
               animation: drop4 4s ease-in-out infinite; }
       @media (max-width: 500px) {
-        section.top-image div#virus-drops #drop4 {
+        section.virus-image div#virus-drops #drop4 {
           width: 10px; } }
-    section.top-image div#virus-drops #drop5 {
+    section.virus-image div#virus-drops #drop5 {
       width: 6px;
       -webkit-transform: translate(80px, 25px) scale(0.9);
               transform: translate(80px, 25px) scale(0.9);
       -webkit-animation: drop5 6s ease-in-out infinite;
               animation: drop5 6s ease-in-out infinite; }
       @media (max-width: 500px) {
-        section.top-image div#virus-drops #drop5 {
+        section.virus-image div#virus-drops #drop5 {
           width: 6px; } }
-    section.top-image div#virus-drops #drop6 {
+    section.virus-image div#virus-drops #drop6 {
       width: 7px;
       -webkit-transform: translate(120px, 50px) scale(0.9);
               transform: translate(120px, 50px) scale(0.9);
       -webkit-animation: drop6 7s ease-in-out infinite;
               animation: drop6 7s ease-in-out infinite; }
       @media (max-width: 500px) {
-        section.top-image div#virus-drops #drop6 {
+        section.virus-image div#virus-drops #drop6 {
           width: 7px; } }
-    section.top-image div#virus-drops #drop7 {
+    section.virus-image div#virus-drops #drop7 {
       width: 5px;
       -webkit-transform: translate(150px, 130px) scale(0.9);
               transform: translate(150px, 130px) scale(0.9);
       -webkit-animation: drop7 3s ease-in-out infinite;
               animation: drop7 3s ease-in-out infinite; }
       @media (max-width: 500px) {
-        section.top-image div#virus-drops #drop7 {
+        section.virus-image div#virus-drops #drop7 {
           width: 5px; } }
-    section.top-image div#virus-drops #drop8 {
+    section.virus-image div#virus-drops #drop8 {
       width: 10px;
       -webkit-transform: translate(135px, 160px) scale(0.9);
               transform: translate(135px, 160px) scale(0.9);
       -webkit-animation: drop8 4s ease-in-out infinite;
               animation: drop8 4s ease-in-out infinite; }
       @media (max-width: 500px) {
-        section.top-image div#virus-drops #drop8 {
+        section.virus-image div#virus-drops #drop8 {
           width: 10px; } }
-    section.top-image div#virus-drops #drop9 {
+    section.virus-image div#virus-drops #drop9 {
       width: 14px;
       -webkit-transform: translate(135px, 170px) scale(0.9);
               transform: translate(135px, 170px) scale(0.9);
       -webkit-animation: drop9 7s ease-in-out infinite;
               animation: drop9 7s ease-in-out infinite; }
       @media (max-width: 500px) {
-        section.top-image div#virus-drops #drop9 {
+        section.virus-image div#virus-drops #drop9 {
           width: 14px; } }
 
 @-webkit-keyframes virus {
@@ -1234,7 +1232,6 @@ section.top-image {
             transform: scale(23); } }
 
 section.content {
-  height: 55%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1244,37 +1241,197 @@ section.content {
           flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  padding: 0 30px; }
   @media (max-width: 500px) {
     section.content {
       font-size: 7rem; } }
-  section.content h1 {
+  section.content h1.home {
     font-size: 9rem; }
     @media (max-width: 500px) {
-      section.content h1 {
+      section.content h1.home {
         font-size: 7rem; } }
-  section.content h2 {
+  section.content h2.home {
     font-size: 3.5rem; }
     @media (max-width: 500px) {
-      section.content h2 {
+      section.content h2.home {
         font-size: 2.8rem; } }
-  section.content h3 {
+  section.content h3.home {
     font-size: 2.2rem;
     margin: 15px 0 30px; }
     @media (max-width: 500px) {
-      section.content h3 {
+      section.content h3.home {
         font-size: 1.7rem; } }
-  section.content p {
+  section.content p.home {
     margin-bottom: 50px;
     font-size: 1.6rem;
     line-height: 25px;
     text-align: center; }
     @media (max-width: 500px) {
-      section.content p {
-        width: 85%;
+      section.content p.home {
         font-size: 1.4rem;
         line-height: 20px;
         text-align: left; } }
     @media only screen and (min-device-width: 320px) and (max-device-width: 900px) and (orientation: landscape) {
-      section.content p {
+      section.content p.home {
         width: 75%; } }
+
+section.service-image {
+  height: 365px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 15; }
+  @media (max-width: 500px) {
+    section.service-image {
+      height: 360px;
+      overflow: hidden; } }
+
+img#laptop {
+  width: 320px;
+  position: absolute;
+  bottom: 50px;
+  z-index: 50; }
+
+div#circle-gear {
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  border-radius: 50%;
+  background: #1b212e;
+  z-index: -1; }
+
+h1.service {
+  margin: 35px 0;
+  font-size: 4rem; }
+  @media (max-width: 500px) {
+    h1.service {
+      font-size: 3.5rem; } }
+
+ul.service {
+  width: 100%;
+  margin-bottom: 70px; }
+  ul.service li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(230, 230, 230, 0.12);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
+    ul.service li:last-of-type {
+      border: none; }
+    ul.service li:hover {
+      background: #202838; }
+  ul.service div.serv-tle {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px 15px;
+    cursor: pointer; }
+  ul.service div.serv-tle-content {
+    max-height: 0;
+    font-size: 1.4rem;
+    -webkit-transition: max-height 0.5s cubic-bezier(0, 1.01, 0, 1.02);
+    transition: max-height 0.5s cubic-bezier(0, 1.01, 0, 1.02); }
+    ul.service div.serv-tle-content.show {
+      max-height: 300px;
+      -webkit-transition: max-height .7s ease-in-out;
+      transition: max-height .7s ease-in-out; }
+    ul.service div.serv-tle-content p {
+      padding: 0px 35px 15px 15px;
+      color: silver;
+      line-height: 20px; }
+  ul.service i {
+    width: 60px;
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+    font-size: 3rem;
+    font-weight: 300;
+    padding-right: 15px;
+    pointer-events: none; }
+    ul.service i.icon-backup {
+      font-size: 3.2rem; }
+    ul.service i.icon-virus {
+      position: relative;
+      left: -4px;
+      font-size: 3.5rem; }
+    ul.service i.icon-history {
+      font-size: 2.9rem; }
+  ul.service h3 {
+    width: calc(100% - 85px);
+    padding-right: 15px;
+    font-size: 1.7rem;
+    font-weight: 300;
+    line-height: 23px;
+    pointer-events: none; }
+
+.plus-content {
+  width: 25px;
+  height: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  border-radius: 4px;
+  background: #242D3E;
+  -webkit-box-shadow: -3px -3px 10px rgba(60, 75, 104, 0.55), 3px 3px 10px rgba(0, 0, 0, 0.55);
+          box-shadow: -3px -3px 10px rgba(60, 75, 104, 0.55), 3px 3px 10px rgba(0, 0, 0, 0.55);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  z-index: 1; }
+  .plus-content:hover {
+    background: #1e2634; }
+  .plus-content span {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    pointer-events: none; }
+    .plus-content span::after {
+      content: '';
+      width: 13px;
+      height: 3px;
+      position: absolute;
+      top: 11px;
+      left: 6px;
+      border-radius: 20px;
+      background: #A8B780; }
+    .plus-content span::before {
+      content: '';
+      width: 3px;
+      height: 13px;
+      position: absolute;
+      top: 6px;
+      left: 11px;
+      border-radius: 20px;
+      background: #A8B780; }
+    .plus-content span.hide {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }

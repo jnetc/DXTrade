@@ -8,35 +8,36 @@ $blue: #27588D;
 $violet: #67658D;
 $shadow: #000000;
 
-body#it-home {
+body#it {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  main {
+    height: 100%;
+    @media only screen and (min-width: 500px) {
+      width: 500px;
+      max-height: 800px;
+      margin: auto;
+    }
+    @media only screen 
+      and (min-device-width: 320px)
+      and (max-device-width: 900px)
+      and (orientation: landscape) {
+        width: 100%;
+        padding-top: 40px;
+      }
+  }
 }
 
-main#it-home {
-  height: 100%;
-  @media only screen and (min-width: 500px) {
-    width: 500px;
-    max-height: 800px;
-    margin: auto;
-  }
-  @media only screen 
-    and (min-device-width: 320px)
-    and (max-device-width: 900px)
-    and (orientation: landscape) {
-      width: 100%;
-      padding-top: 40px;
-    }
-}
   // ВЕРХНЯЯ ЧАСТЬ С КАРИНКОЙ
-section.top-image {
+section.virus-image {
   height: 365px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 15;
   @media (max-width: 500px) {
     height: 300px;
     overflow: hidden;
@@ -376,39 +377,40 @@ section.top-image {
 }
 
 section.content {
-  height: 55%;
+  // height: 55%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 30px;
   @media (max-width: 500px) {
     font-size: 7rem;
   }
-  h1 {
+  h1.home {
     font-size: 9rem;
     @media (max-width: 500px) {
       font-size: 7rem;
     }
   }
-  h2 {
+  h2.home {
     font-size: 3.5rem;
     @media (max-width: 500px) {
       font-size: 2.8rem;
     }
   }
-  h3 {
+  h3.home {
     font-size: 2.2rem;
     margin: 15px 0 30px;
     @media (max-width: 500px) {
       font-size: 1.7rem;
     }
   }
-  p {
+  p.home {
     margin-bottom: 50px;
     font-size: 1.6rem;
     line-height: 25px;
     text-align: center;
     @media (max-width: 500px) {
-      width: 85%;
+      // width: 85%;
       font-size: 1.4rem;
       line-height: 20px;
       text-align: left;

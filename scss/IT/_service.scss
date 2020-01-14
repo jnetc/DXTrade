@@ -7,3 +7,158 @@ $red: #D56060;
 $blue: #27588D;
 $violet: #67658D;
 $shadow: #000000;
+
+section.service-image {
+  height: 365px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 15;
+  @media (max-width: 500px) {
+    height: 360px;
+    overflow: hidden;
+  }
+}
+
+img#laptop {
+  width: 320px;
+  position: absolute;
+  bottom: 50px;
+  z-index: 50;
+}
+div#circle-gear {
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  border-radius: 50%;
+  background: darken($body, 5);
+  z-index: -1;
+}
+
+h1.service {
+  margin: 35px 0;
+  font-size: 4rem;
+  @media (max-width: 500px) {
+    font-size: 3.5rem;
+  }
+}
+ul.service {
+  width: 100%;
+  margin-bottom: 70px;
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-bottom: 1px solid rgba($text, 0.12);
+    transition: all .3s ease-in-out;
+    &:last-of-type {
+      border: none;
+    }
+    &:hover {
+      background: darken($body, 2);
+    }
+  }
+  div.serv-tle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+    cursor: pointer;
+  }
+  div.serv-tle-content {
+    max-height: 0;
+    font-size: 1.4rem;
+    transition: max-height 0.5s cubic-bezier(0, 1.01, 0, 1.02);
+    &.show {
+      max-height: 300px;
+      transition: max-height .7s ease-in-out;
+    }
+    p {
+      padding: 0px 35px 15px 15px;
+      color: darken($text, 15);
+      line-height: 20px;
+    }
+  }
+  i {
+    width: 60px;
+    flex-shrink: 1;
+    font-size: 3rem;
+    font-weight: 300;
+    padding-right: 15px;
+    pointer-events: none;
+    &.icon-backup {
+      font-size: 3.2rem;
+    }
+    &.icon-virus {
+      position: relative;
+      left: -4px;
+      font-size: 3.5rem;
+    }
+    &.icon-history {
+      font-size: 2.9rem;
+    }
+  }
+  h3 {
+    width: calc(100% - 85px);
+    padding-right: 15px;
+    font-size: 1.7rem;
+    font-weight: 300;
+    line-height: 23px;
+    pointer-events: none;
+  }
+}
+
+  // Кнопка для раскрытия подменю
+.plus-content {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 4px;
+  background: $body;
+  box-shadow: 
+    -3px -3px 10px rgba(lighten($body, 13), .55),
+    3px 3px 10px rgba(darken($body, 30), .55);
+  transition: all .3s ease-in-out;
+  // cursor: pointer;
+  // pointer-events: none;
+  z-index: 1;
+  &:hover {
+    background: darken($body, 3);
+  }
+  span {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: all .3s ease-in-out;
+    pointer-events: none;
+    &::after {
+      content: '';
+      width: 13px;
+      height: 3px;
+      position: absolute;
+      top: 11px;
+      left: 6px;
+      border-radius: 20px;
+      background: $green;
+    }
+    &::before {
+      content: '';
+      width: 3px;
+      height: 13px;
+      position: absolute;
+      top: 6px;
+      left: 11px;
+      border-radius: 20px;
+      background:$green;
+    }
+    &.hide {
+      transform: rotate(45deg);
+    }
+  }
+}
