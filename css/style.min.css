@@ -122,8 +122,8 @@ p, span {
     z-index: 1; }
     .it-btn div.icon-bt::after {
       content: '';
-      width: inherit;
-      height: inherit;
+      width: 40px;
+      height: 40px;
       position: absolute;
       top: 0px;
       left: 0px;
@@ -133,8 +133,8 @@ p, span {
       z-index: -2; }
     .it-btn div.icon-bt::before {
       content: '';
-      width: inherit;
-      height: inherit;
+      width: 40px;
+      height: 40px;
       position: absolute;
       top: 0px;
       left: -3px;
@@ -147,7 +147,7 @@ p, span {
     font-size: 2.6rem;
     color: #1b212e; }
     .it-btn i#phone-home {
-      top: 3px;
+      top: 4px;
       left: 2px; }
     .it-btn i#geo-delivery {
       top: 5px;
@@ -155,8 +155,8 @@ p, span {
 
 @-webkit-keyframes callphone {
   0% {
-    -webkit-box-shadow: 0 0 0px 0px rgba(168, 183, 128, 0.8);
-            box-shadow: 0 0 0px 0px rgba(168, 183, 128, 0.8); }
+    -webkit-box-shadow: 0 0 0px 0px #a8b780;
+            box-shadow: 0 0 0px 0px #a8b780; }
   50% {
     -webkit-box-shadow: 0 0 15px 15px rgba(168, 183, 128, 0);
             box-shadow: 0 0 15px 15px rgba(168, 183, 128, 0); }
@@ -166,8 +166,8 @@ p, span {
 
 @keyframes callphone {
   0% {
-    -webkit-box-shadow: 0 0 0px 0px rgba(168, 183, 128, 0.8);
-            box-shadow: 0 0 0px 0px rgba(168, 183, 128, 0.8); }
+    -webkit-box-shadow: 0 0 0px 0px #a8b780;
+            box-shadow: 0 0 0px 0px #a8b780; }
   50% {
     -webkit-box-shadow: 0 0 15px 15px rgba(168, 183, 128, 0);
             box-shadow: 0 0 15px 15px rgba(168, 183, 128, 0); }

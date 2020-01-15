@@ -162,8 +162,8 @@ p, span {
     z-index: 1;
     &::after {
       content: '';
-      width: inherit;
-      height: inherit;
+      width: 40px;
+      height: 40px;
       position: absolute;
       top: 0px;
       left: 0px;
@@ -173,8 +173,8 @@ p, span {
     }
     &::before {
       content: '';
-      width: inherit;
-      height: inherit;
+      width: 40px;
+      height: 40px;
       position: absolute;
       top: 0px;
       left: -3px;
@@ -189,7 +189,7 @@ p, span {
     font-size: 2.6rem;
     color: darken($body, 5);
     &#phone-home {
-      top: 3px;
+      top: 4px;
       left: 2px;
     }
     &#geo-delivery {
@@ -200,9 +200,8 @@ p, span {
 }
 
 @keyframes callphone {
-  0% {box-shadow: 0 0 0px 0px rgba($green, .8);}
+  0% {box-shadow: 0 0 0px 0px rgba($green, 1);}
   50% {box-shadow: 0 0 15px 15px rgba($green, 0);}
-  // 75% {box-shadow: 0 0 5px 15px rgba($green, 0);}
   100% {box-shadow: 0 0 0px 0px rgba($green, 0);}
 }
   // Круговая кнопка
