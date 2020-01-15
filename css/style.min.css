@@ -81,28 +81,15 @@ p, span {
 .btn2, .it-btn {
   position: relative;
   border-radius: 150px;
-  background: #565D6D;
-  -webkit-box-shadow: -5px -5px 10px rgba(230, 230, 230, 0.25), 5px 10px 15px rgba(0, 0, 0, 0.25);
-          box-shadow: -5px -5px 10px rgba(230, 230, 230, 0.25), 5px 10px 15px rgba(0, 0, 0, 0.25);
+  border: 2px solid #2a3448;
+  background: #242D3E;
+  -webkit-box-shadow: -3px -3px 10px rgba(60, 75, 104, 0.55), -6px -6px 15px rgba(60, 75, 104, 0.25), 3px 3px 10px rgba(0, 0, 0, 0.55), 6px 6px 15px rgba(0, 0, 0, 0.25);
+          box-shadow: -3px -3px 10px rgba(60, 75, 104, 0.55), -6px -6px 15px rgba(60, 75, 104, 0.25), 3px 3px 10px rgba(0, 0, 0, 0.55), 6px 6px 15px rgba(0, 0, 0, 0.25);
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   z-index: 5; }
   .btn2:hover, .it-btn:hover {
-    background: #6c758a; }
-  .btn2::after, .it-btn::after {
-    content: '';
-    width: calc(100% - 6px);
-    height: calc(100% - 6px);
-    position: absolute;
-    border-radius: inherit;
-    top: 3px;
-    left: 3px;
-    background: #1b212e;
-    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.45);
-            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.45);
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-    z-index: -1; }
+    background: #2a3448; }
 
 .link-btn {
   padding: 16px 35px;
@@ -111,6 +98,7 @@ p, span {
   letter-spacing: 1.2px; }
 
 .it-btn {
+  margin-bottom: 70px;
   padding: 25px 35px 25px 70px;
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -156,10 +144,14 @@ p, span {
       z-index: -5; }
   .it-btn i {
     position: absolute;
-    top: 3px;
-    left: 2px;
     font-size: 2.6rem;
     color: #1b212e; }
+    .it-btn i#phone-home {
+      top: 3px;
+      left: 2px; }
+    .it-btn i#geo-delivery {
+      top: 5px;
+      left: 2px; }
 
 @-webkit-keyframes callphone {
   0% {
@@ -1560,7 +1552,8 @@ img#price-pic {
 h1.prices {
   margin: 35px 0;
   font-size: 5rem;
-  text-align: left; }
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
   @media (max-width: 500px) {
     h1.prices {
       font-size: 4.5rem; } }
@@ -1634,3 +1627,61 @@ ul.price-list {
       color: #b3b3b3;
       font-size: 1.4rem;
       font-weight: 300; }
+
+section.delivery-image {
+  height: 365px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 15; }
+  @media (max-width: 500px) {
+    section.delivery-image {
+      height: 360px;
+      overflow: hidden; } }
+
+img#delivery {
+  width: 320px;
+  position: absolute;
+  bottom: 50px;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  z-index: 50; }
+  @media (max-width: 500px) {
+    img#delivery {
+      -webkit-transform: scale(1);
+              transform: scale(1); } }
+
+.delivery {
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
+
+h1.delivery {
+  margin: 35px 0;
+  font-size: 4rem; }
+  @media (max-width: 500px) {
+    h1.delivery {
+      font-size: 3.5rem; } }
+
+h2.delivery {
+  padding-top: 5px;
+  font-size: 2rem; }
+  @media (max-width: 500px) {
+    h2.delivery {
+      font-size: 1.9rem; } }
+
+p.delivery {
+  margin: 20px 0 50px;
+  font-size: 1.6rem;
+  line-height: 25px; }
+  @media (max-width: 500px) {
+    p.delivery {
+      font-size: 1.4rem;
+      line-height: 20px;
+      text-align: left; } }

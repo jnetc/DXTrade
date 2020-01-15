@@ -7,3 +7,56 @@ $red: #D56060;
 $blue: #27588D;
 $violet: #67658D;
 $shadow: #000000;
+
+section.delivery-image {
+  height: 365px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 15;
+  @media (max-width: 500px) {
+    height: 360px;
+    overflow: hidden;
+  }
+}
+img#delivery {
+  width: 320px;
+  position: absolute;
+  bottom: 50px;
+  transform: scale(1.2);
+  z-index: 50;
+  @media (max-width: 500px) {
+    transform: scale(1);
+  }
+}
+
+
+.delivery {
+  align-self: flex-start;
+}
+
+h1.delivery {
+  margin: 35px 0;
+  font-size: 4rem;
+  @media (max-width: 500px) {
+    font-size: 3.5rem;
+  }
+}
+h2.delivery {
+  padding-top: 5px;
+  font-size: 2rem;
+  @media (max-width: 500px) {
+    font-size: 1.9rem;
+  }
+}
+p.delivery {
+  margin: 20px 0 50px;
+  font-size: 1.6rem;
+  line-height: 25px;
+  @media (max-width: 500px) {
+    font-size: 1.4rem;
+    line-height: 20px;
+    text-align: left;
+  }
+}

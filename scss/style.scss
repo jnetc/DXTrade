@@ -98,27 +98,30 @@ p, span {
 .btn2 {
   position: relative;
   border-radius: 150px;
-  background: $border;
+  border: 2px solid lighten($body, 3);
+  background: $body;
   box-shadow: 
-    -5px -5px 10px rgba($text, .25),
-    5px 10px 15px rgba($shadow, .25);
+    -3px -3px 10px rgba(lighten($body, 13), .55),
+    -6px -6px 15px rgba(lighten($body, 13), .25),
+    3px 3px 10px rgba(darken($body, 30), .55),
+    6px 6px 15px rgba(darken($body, 30), .25);
   transition: all .3s ease-in-out;
   z-index: 5;
   &:hover {
-    background: lighten($border, 10);
-  }
-  &::after {
-    content: '';
-    width: calc(100% - 6px);
-    height: calc(100% - 6px);
-    position: absolute;
-    border-radius: inherit;
-    top: 3px;
-    left: 3px;
-    background: darken($body, 5);
-    box-shadow: 0 5px 5px rgba($shadow, .45);
-    transition: all .3s ease-in-out;
-    z-index: -1;
+    background: lighten($body, 3);
+  // &::after {
+  //   content: '';
+  //   width: calc(100% - 6px);
+  //   height: calc(100% - 6px);
+  //   position: absolute;
+  //   border-radius: inherit;
+  //   top: 3px;
+  //   left: 3px;
+  //   // background: darken($body, 5);
+  //   box-shadow: 0 5px 5px rgba($shadow, .45);
+  //   transition: all .3s ease-in-out;
+  //   z-index: -1;
+  // }
   }
 }
 
@@ -134,6 +137,7 @@ p, span {
   // Широкая кнопка
 .it-btn {
   // display: inline-block;
+  margin-bottom: 70px;
   padding: 25px 35px 25px 70px;
   font-size: 1.6rem;
   text-transform: uppercase;
@@ -181,10 +185,17 @@ p, span {
   }
   i {
     position: absolute;
-    top: 3px;
-    left: 2px;
+    
     font-size: 2.6rem;
     color: darken($body, 5);
+    &#phone-home {
+      top: 3px;
+      left: 2px;
+    }
+    &#geo-delivery {
+      top: 5px;
+      left: 2px;
+    }
   }
 }
 

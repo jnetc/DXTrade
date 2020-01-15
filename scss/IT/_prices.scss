@@ -38,7 +38,7 @@ img#price-pic {
 h1.prices {
   margin: 35px 0;
   font-size: 5rem;
-  text-align: left;
+  align-self: flex-start;
   @media (max-width: 500px) {
     font-size: 4.5rem;
   }
