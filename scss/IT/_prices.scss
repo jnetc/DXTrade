@@ -7,3 +7,101 @@ $red: #D56060;
 $blue: #27588D;
 $violet: #67658D;
 $shadow: #000000;
+
+
+section.price-image {
+  height: 365px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 15;
+  @media (max-width: 500px) {
+    height: 360px;
+    overflow: hidden;
+  }
+}
+img#price-pic {
+  width: 320px;
+  position: absolute;
+  bottom: 50px;
+  transform: scale(1.2);
+  z-index: 50;
+  @media (max-width: 500px) {
+    transform: scale(1);
+  }
+}
+
+
+
+
+h1.prices {
+  margin: 35px 0;
+  font-size: 5rem;
+  text-align: left;
+  @media (max-width: 500px) {
+    font-size: 4.5rem;
+  }
+}
+ul.price-list {
+  width: 100%;
+  margin-bottom: 70px;
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-bottom: 1px solid rgba($text, 0.12);
+    transition: all .3s ease-in-out;
+    &:last-of-type {
+      border: none;
+    }
+    &:hover {
+      // background: darken($body, 2);
+    }
+  }
+  div.price-tle {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 15px 5px 15px;
+    h3 {
+      width: calc(100% - 100px);
+      flex-grow: 2;
+      padding-right: 15px;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 23px;
+      pointer-events: none;
+    }
+    span {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+  div.worktime {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px 15px 20px 15px;
+    i {
+      width: 25px;
+      position: relative;
+      left: -5px;
+      color: darken($text, 20);
+      font-size: 1.7rem;
+    }
+    span {
+      flex-grow: 2;
+      color: darken($text, 20);
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+    div.time {
+      color: darken($text, 20);
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+  }
+}

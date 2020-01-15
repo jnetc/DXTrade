@@ -49,10 +49,10 @@ a {
   color: $text;
   cursor: pointer;
   &:visited {
-    color: transparent;
+    color: $text;
   }
   &:active {
-    color: transparent;
+    color: $text;
   }
 }
 
