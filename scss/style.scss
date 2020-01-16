@@ -180,13 +180,12 @@ p, span {
       left: -3px;
       border-radius: 50%;
       box-shadow: 0 0 0 0 rgba($green, 1);
-      animation: callphone 3s ease-in-out infinite;
+      animation: callphone 1s ease-in-out infinite;
       z-index: -5;
     }
   }
   i {
     position: absolute;
-    
     font-size: 2.6rem;
     color: darken($body, 5);
     &#phone-home {
@@ -202,8 +201,8 @@ p, span {
 
 @keyframes callphone {
   // 0% {box-shadow: 0 0 0px 0px rgba($green, 1);}
-  50% {box-shadow: 0 0 15px 15px rgba($green, 0);}
-  100% {box-shadow: 0 0 0 0 rgba($green, 0);}
+  100% {box-shadow: 0 0 15px 15px rgba($green, 0);}
+  // 100% {box-shadow: 0 0 0 0 rgba($green, 0);}
 }
   // Круговая кнопка
 .circle-btn {
