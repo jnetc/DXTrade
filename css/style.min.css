@@ -118,8 +118,7 @@ p, span {
     -webkit-box-shadow: inset 1px 3px 5px rgba(0, 0, 0, 0.4), 0 0 3px 1px rgba(86, 93, 109, 0.9);
             box-shadow: inset 1px 3px 5px rgba(0, 0, 0, 0.4), 0 0 3px 1px rgba(86, 93, 109, 0.9);
     -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    z-index: 1; }
+            transform: translateY(-50%); }
     .it-btn div.icon-bt::after {
       content: '';
       width: 40px;
@@ -128,22 +127,10 @@ p, span {
       top: 0px;
       left: 0px;
       border-radius: 50%;
-      -webkit-box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9);
-              box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9);
-      z-index: -2; }
-    .it-btn div.icon-bt::before {
-      content: '';
-      width: 40px;
-      height: 40px;
-      position: absolute;
-      top: 0px;
-      left: -3px;
-      border-radius: 50%;
-      -webkit-box-shadow: 0 0 0px 0px rgba(36, 45, 62, 0);
-              box-shadow: 0 0 0px 0px rgba(36, 45, 62, 0);
+      -webkit-box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9), 0 0 0px 0px #a8b780;
+              box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9), 0 0 0px 0px #a8b780;
       -webkit-animation: callphone 3s ease-in-out infinite;
-              animation: callphone 3s ease-in-out infinite;
-      z-index: -5; }
+              animation: callphone 3s ease-in-out infinite; }
   .it-btn i {
     position: absolute;
     font-size: 2.6rem;
@@ -157,19 +144,19 @@ p, span {
 
 @-webkit-keyframes callphone {
   50% {
-    -webkit-box-shadow: 0 0 0px 0px #a8b780;
-            box-shadow: 0 0 0px 0px #a8b780; }
+    -webkit-box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9), 0 0 0px 0px #a8b780;
+            box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9), 0 0 0px 0px #a8b780; }
   100% {
-    -webkit-box-shadow: 0 0 15px 15px rgba(36, 45, 62, 0);
-            box-shadow: 0 0 15px 15px rgba(36, 45, 62, 0); } }
+    -webkit-box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9), 0 0 15px 15px rgba(168, 183, 128, 0);
+            box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9), 0 0 15px 15px rgba(168, 183, 128, 0); } }
 
 @keyframes callphone {
   50% {
-    -webkit-box-shadow: 0 0 0px 0px #a8b780;
-            box-shadow: 0 0 0px 0px #a8b780; }
+    -webkit-box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9), 0 0 0px 0px #a8b780;
+            box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9), 0 0 0px 0px #a8b780; }
   100% {
-    -webkit-box-shadow: 0 0 15px 15px rgba(36, 45, 62, 0);
-            box-shadow: 0 0 15px 15px rgba(36, 45, 62, 0); } }
+    -webkit-box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9), 0 0 15px 15px rgba(168, 183, 128, 0);
+            box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9), 0 0 15px 15px rgba(168, 183, 128, 0); } }
 
 .circle-btn, .main-phone-btn,
 .main-email-btn, .main-geo-btn {
