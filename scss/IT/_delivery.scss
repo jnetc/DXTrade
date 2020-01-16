@@ -14,22 +14,128 @@ section.delivery-image {
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
   z-index: 15;
   @media (max-width: 500px) {
     height: 360px;
     overflow: hidden;
   }
 }
-img#delivery {
-  width: 320px;
-  position: absolute;
-  bottom: 50px;
+
+.scale {
   transform: scale(1.2);
-  z-index: 50;
   @media (max-width: 500px) {
     transform: scale(1);
   }
 }
+
+img#delivery {
+  width: 340px;
+  position: absolute;
+  bottom: 50px;
+  z-index: 50;
+  @extend .scale;
+}
+
+
+img#green1 {
+  width: 140px;
+  position: absolute;
+  bottom: 80px;
+  left: 40px;
+  transform: skewX(0deg);
+  animation: wind 2s linear infinite;
+  // animation-delay: 1s;
+  @extend .scale;
+}
+img#green2 {
+  width: 90px;
+  position: absolute;
+  bottom: 80px;
+  left: 15px;
+  transform: skewX(0deg);
+  animation: wind 2s linear infinite;
+  @extend .scale;
+}
+img#green3 {
+  width: 110px;
+  position: absolute;
+  bottom: 60px;
+  right: 10px;
+  z-index: 51;
+  transform: skewX(0deg);
+  animation: wind2 2s linear infinite;
+  @extend .scale;
+}
+img#green4 {
+  width: 80px;
+  position: absolute;
+  bottom: 55px;
+  right: 50px;
+  z-index: 51;
+  transform: skewX(0deg);
+  animation: wind2 2s linear infinite;
+  @extend .scale;
+}
+
+img#cloud1 {
+  width: 170px;
+  position: absolute;
+  top: 35px;
+  right: 80px;
+  animation: cloud1 45s linear infinite;
+  @extend .scale;
+  z-index: 51;
+}
+img#cloud2 {
+  width: 100px;
+  height: 90px;
+  position: absolute;
+  top: 0px;
+  right: -230px;
+  animation: cloud2 50s linear infinite;
+  @extend .scale;
+}
+img#cloud3 {
+  width: 130px;
+  position: absolute;
+  top: 5px;
+  right: -180px;
+  animation: cloud2 62s linear infinite;
+  animation-delay: 20s;
+  @extend .scale;
+}
+
+@keyframes wind {
+  30% {transform: skewX(15deg);}
+  70% {transform: skewX(10deg);}
+}
+@keyframes wind2 {
+  25% {transform: skewX(13deg);}
+  65% {transform: skewX(8deg);}
+}
+
+
+
+@keyframes cloud1 {
+  40% {opacity: 1;}
+  49% {transform: translateX(-430px); }
+  50% {transform: translateX(-430px); opacity: 0;}
+  51% {transform: translateX(430px); opacity: 0;}
+  52% {transform: translateX(430px); opacity: 1;}
+
+}
+@keyframes cloud2 {
+  60% {opacity: 1;}
+  70% {transform: translateX(-800px); }
+  70% {transform: translateX(-800px); opacity: 0;}
+  71% {transform: translateX(0px); opacity: 0;}
+  72% {transform: translateX(0px); opacity: 1;}
+}
+
+
+
+
 
 
 .delivery {
