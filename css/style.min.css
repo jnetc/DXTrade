@@ -127,6 +127,8 @@ p, span {
       top: 0px;
       left: 0px;
       border-radius: 50%;
+      outline: none;
+      border: none;
       -webkit-box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9), 0 0 0px 0px #a8b780;
               box-shadow: 0 0 5px 2px rgba(86, 93, 109, 0.9), 0 0 0px 0px #a8b780;
       -webkit-animation: callphone 3s ease-in-out infinite;
