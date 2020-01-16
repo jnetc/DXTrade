@@ -141,8 +141,8 @@ p, span {
       border-radius: 50%;
       -webkit-box-shadow: 0 0 0px 0px rgba(213, 96, 96, 0);
               box-shadow: 0 0 0px 0px rgba(213, 96, 96, 0);
-      -webkit-animation: callphone 1s ease-in-out infinite;
-              animation: callphone 1s ease-in-out infinite;
+      -webkit-animation: callphone 3s ease-in-out infinite;
+              animation: callphone 3s ease-in-out infinite;
       z-index: -5; }
   .it-btn i {
     position: absolute;
@@ -156,7 +156,7 @@ p, span {
       left: 2px; }
 
 @-webkit-keyframes callphone {
-  1% {
+  50% {
     -webkit-box-shadow: 0 0 0px 0px #d56060;
             box-shadow: 0 0 0px 0px #d56060; }
   100% {
@@ -164,7 +164,7 @@ p, span {
             box-shadow: 0 0 15px 15px rgba(213, 96, 96, 0); } }
 
 @keyframes callphone {
-  1% {
+  50% {
     -webkit-box-shadow: 0 0 0px 0px #d56060;
             box-shadow: 0 0 0px 0px #d56060; }
   100% {
