@@ -180,7 +180,6 @@ p, span {
       left: -3px;
       border-radius: 50%;
       box-shadow: 0 0 0px 0px rgba($body, 0);
-      transform: translate3d(0,0,0);
       animation: callphone 3s ease-in-out infinite;
       z-index: -5;
     }
@@ -202,7 +201,7 @@ p, span {
 
 @keyframes callphone {
   50% {box-shadow: 0 0 0px 0px rgba($green, 1);}
-  100% {box-shadow: 0 0 15px 15px rgba($green, 0);}
+  100% {box-shadow: 0 0 15px 15px rgba($body, 0);}
   // 100% {box-shadow: 0 0 0 0 rgba($green, 0);}
 }
   // Круговая кнопка
