@@ -9,18 +9,7 @@ $violet: #67658D;
 $shadow: #000000;
 
 
-section.price-image {
-  height: 365px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 15;
-  @media (max-width: 500px) {
-    height: 360px;
-    overflow: hidden;
-  }
-}
+  // ВЕРХНЯЯ ЧАСТЬ С КАРИНКОЙ
 img#price-pic {
   width: 320px;
   position: absolute;
@@ -32,17 +21,8 @@ img#price-pic {
   }
 }
 
-
-
-
-h1.prices {
-  margin: 35px 0;
-  font-size: 5rem;
-  align-self: flex-start;
-  @media (max-width: 500px) {
-    font-size: 4.5rem;
-  }
-}
+  // СОДЕРЖАНИЕ
+  // Список цен
 ul.price-list {
   width: 100%;
   margin-bottom: 70px;
@@ -56,9 +36,6 @@ ul.price-list {
     transition: all .3s ease-in-out;
     &:last-of-type {
       border: none;
-    }
-    &:hover {
-      // background: darken($body, 2);
     }
   }
   div.price-tle {

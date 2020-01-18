@@ -1,0 +1,213 @@
+$body: #242D3E;
+$text: #E6E6E6;
+$border: #565D6D;
+$orange: #D58D60;
+$green: #A8B780;
+$red: #D56060;
+$blue: #27588D;
+$violet: #67658D;
+$shadow: #000000;
+
+///// Шаблон кнопки
+.btn {
+  position: relative;
+  border-radius: 150px;
+  background: $border;
+  box-shadow: 5px 20px 15px rgba($shadow, .25);
+  transition: all .3s ease-in-out;
+  z-index: 5;
+  &:hover {
+    background: lighten($border, 10);
+  }
+  &::after {
+    content: '';
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    position: absolute;
+    border-radius: inherit;
+    top: 3px;
+    left: 3px;
+    background: darken($body, 5);
+    box-shadow: 0 5px 5px rgba($shadow, .45);
+    transition: all .3s ease-in-out;
+    z-index: -1;
+  }
+}
+.btn2 {
+  position: relative;
+  border-radius: 150px;
+  border: 2px solid lighten($body, 3);
+  background: $body;
+  box-shadow: 
+    -3px -3px 10px rgba(lighten($body, 13), .55),
+    -6px -6px 15px rgba(lighten($body, 13), .25),
+    3px 3px 10px rgba(darken($body, 30), .55),
+    6px 6px 15px rgba(darken($body, 30), .25);
+  transition: all .3s ease-in-out;
+  z-index: 5;
+  &:hover {
+    background: lighten($body, 3);
+  // &::after {
+  //   content: '';
+  //   width: calc(100% - 6px);
+  //   height: calc(100% - 6px);
+  //   position: absolute;
+  //   border-radius: inherit;
+  //   top: 3px;
+  //   left: 3px;
+  //   // background: darken($body, 5);
+  //   box-shadow: 0 5px 5px rgba($shadow, .45);
+  //   transition: all .3s ease-in-out;
+  //   z-index: -1;
+  // }
+  }
+}
+
+  // Широкая кнопка
+.link-btn {
+  padding: 16px 35px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  @extend .btn;
+}
+  // Широкая кнопка
+.it-btn {
+  margin-bottom: 70px;
+  padding: 25px 35px 25px 70px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  @extend .btn2;
+  color: darken($text, 20);
+  @media (max-device-width: 600px) {
+    margin-bottom: 100px;
+  }
+  div.icon-bt {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    border-radius: 50%;
+    background: $green;
+    box-shadow: 
+      inset 1px 3px 5px rgba($shadow, .4),
+      0 0 3px 1px rgba($border, .9);
+      transform: translateY(-50%);
+    &::after {
+      content: '';
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      border-radius: 50%;
+      box-shadow: 
+        0 0 5px 2px rgba($border, .9),
+        0 0 0px 0px rgba($green, 1);
+      animation: callphone 3s ease-in-out infinite;
+    }
+  }
+  i {
+    position: absolute;
+    font-size: 2.6rem;
+    color: darken($body, 5);
+    &#phone-home {
+      top: 4px;
+      left: 2px;
+    }
+    &#geo-delivery {
+      top: 5px;
+      left: 2px;
+    }
+  }
+}
+
+@keyframes callphone {
+  50% {box-shadow: 
+    0 0 5px 2px rgba($border, .9),
+    0 0 0px 0px rgba($green, 1);}
+  100% {box-shadow: 
+    0 0 5px 2px rgba($border, .9), 
+    0 0 15px 15px rgba($green, 0);}
+}
+
+
+  // Круговая кнопка
+.circle-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 17px;
+  @extend .btn;
+  &:hover {
+    &::after {
+      transform: scale(.93);
+    }
+  }
+}
+
+  // NНАВИГАЦИЯ ПО САЙТАМ
+nav {
+  width: 501px;
+  position: fixed;
+  background: linear-gradient(to top, $body 0%, lighten($body, 2));
+  z-index: 1000;
+  @media (max-width: 500px) {
+      width: 100%;
+      bottom: 0;
+    }
+
+  @media (min-width: 501px) {
+    top: 0;
+    border-radius:  0 0 15px 15px;
+    box-shadow: 5px 15px 15px rgba($shadow, .3);
+  }
+  ul#navigation {
+    display: flex;
+    justify-content: space-around;
+    li {
+      position: relative;
+      &.active-btn {
+        &::after {
+          content: '';
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: lighten($body, 50);
+        }
+      }
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      color: lighten($body, 25);
+      font-size: 1.3rem;
+      font-weight: 400;
+      transition: all .3s ease-in-out;
+      i {
+        color: lighten($body, 10);
+        font-size: 2.5rem;
+        transition: all .3s ease-in-out;
+      }
+      &:hover {
+        color: lighten($body, 50);
+        i {
+          color: lighten($body, 50);
+        }
+      }
+      &.active {
+        color: lighten($body, 50);
+        i {
+          color: lighten($body, 50);
+        }
+      }
+    }
+
+  }
+}

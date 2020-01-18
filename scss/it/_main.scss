@@ -1,0 +1,81 @@
+$body: #242D3E;
+$text: #E6E6E6;
+$border: #565D6D;
+$orange: #D58D60;
+$green: #A8B780;
+$red: #D56060;
+$blue: #27588D;
+$violet: #67658D;
+$shadow: #000000;
+
+body#it {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  main {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 75px;
+    @media only screen and (min-width: 500px) {
+      width: 500px;
+      // max-height: 800px;
+      margin: auto;
+    }
+    @media only screen 
+      and (min-device-width: 320px)
+      and (max-device-width: 900px)
+      and (orientation: landscape) {
+        width: 100%;
+        padding-top: 40px;
+      }
+    @media only screen
+      and (min-device-width: 320px)
+      and (max-device-width: 500px)
+      and (orientation: portrait) {
+        width: 100%;
+        padding-top: 0px;
+      }
+  }
+}
+  // Блок с картинкой
+section.image {
+  height: 365px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 15;
+  @media (max-width: 500px) {
+    height: 360px;
+    overflow: hidden;
+  }
+}
+  // Блок с содержанием
+section.content {
+  // height: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 30px;
+  @media (max-width: 500px) {
+    font-size: 7rem;
+  }
+
+}
+h1.title {
+  margin: 35px 0;
+  font-size: 4.5rem;
+  // align-self: flex-start;
+  @media (max-width: 500px) {
+    font-size: 3.5rem;
+  }
+}
+
+@import './home';
+@import './service';
+@import './prices';
+@import './delivery';
+@import './contacts';

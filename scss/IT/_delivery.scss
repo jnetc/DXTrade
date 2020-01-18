@@ -8,27 +8,14 @@ $blue: #27588D;
 $violet: #67658D;
 $shadow: #000000;
 
-section.delivery-image {
-  height: 365px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  z-index: 15;
-  @media (max-width: 500px) {
-    height: 360px;
-    overflow: hidden;
-  }
-}
-
+  // Класс для кроссплатформености
 .scale {
   transform: scale(1.2);
   @media (max-width: 500px) {
     transform: scale(1);
   }
 }
-
+  // ВЕРХНЯЯ ЧАСТЬ С КАРИНКОЙ
 img#delivery {
   width: 340px;
   position: absolute;
@@ -37,7 +24,6 @@ img#delivery {
   @extend .scale;
 }
 
-
 img#green1 {
   width: 140px;
   position: absolute;
@@ -45,7 +31,6 @@ img#green1 {
   left: 40px;
   transform: skewX(0deg);
   animation: wind 2s linear infinite;
-  // animation-delay: 1s;
   @extend .scale;
 }
 img#green2 {
@@ -115,15 +100,12 @@ img#cloud3 {
   65% {transform: skewX(8deg);}
 }
 
-
-
 @keyframes cloud1 {
   40% {opacity: 1;}
   49% {transform: translateX(-430px); }
   50% {transform: translateX(-430px); opacity: 0;}
   51% {transform: translateX(430px); opacity: 0;}
   52% {transform: translateX(430px); opacity: 1;}
-
 }
 @keyframes cloud2 {
   60% {opacity: 1;}
@@ -134,20 +116,9 @@ img#cloud3 {
 }
 
 
-
-
-
-
+  // СОДЕРЖАНИЕ
 .delivery {
   align-self: flex-start;
-}
-
-h1.delivery {
-  margin: 35px 0;
-  font-size: 4rem;
-  @media (max-width: 500px) {
-    font-size: 3.5rem;
-  }
 }
 h2.delivery {
   padding-top: 5px;

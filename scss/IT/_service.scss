@@ -8,18 +8,7 @@ $blue: #27588D;
 $violet: #67658D;
 $shadow: #000000;
 
-section.service-image {
-  height: 365px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  z-index: 15;
-  @media (max-width: 500px) {
-    height: 360px;
-    overflow: hidden;
-  }
-}
+  // ВЕРХНЯЯ ЧАСТЬ С КАРИНКОЙ
 
 img#laptop {
   width: 320px;
@@ -37,7 +26,7 @@ div#circle-gear {
   position: absolute;
   border-radius: 50%;
   background: darken($body, 5);
-  transform: scale(1.2);
+  transform: scale(1.13);
   z-index: -1;
   @media (max-width: 500px) {
     transform: scale(1);
@@ -107,17 +96,8 @@ div#circle-gear {
   100% {transform: rotate(-360deg);  }
 }
 
-
-
-
-
-h1.service {
-  margin: 35px 0;
-  font-size: 4rem;
-  @media (max-width: 500px) {
-    font-size: 3.5rem;
-  }
-}
+  // СОДЕРЖАНИЕ
+  // Список услуг
 ul.service {
   width: 100%;
   margin-bottom: 70px;
@@ -200,8 +180,6 @@ ul.service {
     -3px -3px 10px rgba(lighten($body, 13), .55),
     3px 3px 10px rgba(darken($body, 30), .55);
   transition: all .3s ease-in-out;
-  // cursor: pointer;
-  // pointer-events: none;
   z-index: 1;
   &:hover {
     background: darken($body, 3);
