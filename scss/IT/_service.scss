@@ -35,6 +35,8 @@ div#circle-gear {
     position: absolute;
   }
   img:nth-of-type(1) {
+    width: 30px;
+    height: 30px;
     top: 40px;
     left: 220px;
     animation: gear 5s linear infinite;
@@ -63,31 +65,57 @@ div#circle-gear {
     left: 115px;
     animation: gearBack 15s linear infinite;
   }
+  // img:nth-of-type(6) {
+  //   top: 0px;
+  //   left: 20px;
+  //   animation: gear 25s linear infinite;
+  // }
+  // img:nth-of-type(7) {
+  //   width: 65px;
+  //   height: 65px;
+  //   top: 60px;
+  //   left: 165px;
+  //   animation: gear 15s linear infinite;
+  // }
+  // img:nth-of-type(8) {
+  //   width: 55px;
+  //   height: 55px;
+  //   top: 100px;
+  //   left: 300px;
+  //   animation: gear 5s linear infinite;
+  // }
   img:nth-of-type(6) {
+    top: 70px;
+    left: 265px;
+    animation: gearBack 8s linear infinite;
+  }
+  svg {
+    fill: $body;
+    position: absolute;
+  }
+  #svg-gear1 {
+    width: 100px;
+    height: 100px;
     top: 0px;
     left: 20px;
     animation: gear 25s linear infinite;
   }
-  img:nth-of-type(7) {
+  #svg-gear2 {
     width: 65px;
     height: 65px;
     top: 60px;
     left: 165px;
     animation: gear 15s linear infinite;
   }
-  img:nth-of-type(8) {
+  #svg-gear3 {
     width: 55px;
     height: 55px;
     top: 100px;
     left: 300px;
     animation: gear 5s linear infinite;
   }
-  img:nth-of-type(9) {
-    top: 70px;
-    left: 265px;
-    animation: gearBack 8s linear infinite;
-  }
 }
+
 
 @keyframes gear {
   100% {transform: rotate(360deg);  }

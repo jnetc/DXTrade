@@ -1311,6 +1311,8 @@ div#circle-gear {
   div#circle-gear img {
     position: absolute; }
   div#circle-gear img:nth-of-type(1) {
+    width: 30px;
+    height: 30px;
     top: 40px;
     left: 220px;
     -webkit-animation: gear 5s linear infinite;
@@ -1340,29 +1342,34 @@ div#circle-gear {
     -webkit-animation: gearBack 15s linear infinite;
             animation: gearBack 15s linear infinite; }
   div#circle-gear img:nth-of-type(6) {
+    top: 70px;
+    left: 265px;
+    -webkit-animation: gearBack 8s linear infinite;
+            animation: gearBack 8s linear infinite; }
+  div#circle-gear svg {
+    fill: #242D3E;
+    position: absolute; }
+  div#circle-gear #svg-gear1 {
+    width: 100px;
+    height: 100px;
     top: 0px;
     left: 20px;
     -webkit-animation: gear 25s linear infinite;
             animation: gear 25s linear infinite; }
-  div#circle-gear img:nth-of-type(7) {
+  div#circle-gear #svg-gear2 {
     width: 65px;
     height: 65px;
     top: 60px;
     left: 165px;
     -webkit-animation: gear 15s linear infinite;
             animation: gear 15s linear infinite; }
-  div#circle-gear img:nth-of-type(8) {
+  div#circle-gear #svg-gear3 {
     width: 55px;
     height: 55px;
     top: 100px;
     left: 300px;
     -webkit-animation: gear 5s linear infinite;
             animation: gear 5s linear infinite; }
-  div#circle-gear img:nth-of-type(9) {
-    top: 70px;
-    left: 265px;
-    -webkit-animation: gearBack 8s linear infinite;
-            animation: gearBack 8s linear infinite; }
 
 @-webkit-keyframes gear {
   100% {
