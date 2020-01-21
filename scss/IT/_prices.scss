@@ -11,12 +11,13 @@ $shadow: #000000;
 
   // ВЕРХНЯЯ ЧАСТЬ С КАРИНКОЙ
 img#price-pic {
-  width: 320px;
+  width: 350px;
   position: absolute;
   bottom: 50px;
   transform: scale(1.2);
   z-index: 50;
   @media (max-width: 500px) {
+    width: 100%;
     transform: scale(1);
   }
 }

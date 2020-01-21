@@ -1513,7 +1513,7 @@ ul.service {
               transform: rotate(45deg); }
 
 img#price-pic {
-  width: 320px;
+  width: 350px;
   position: absolute;
   bottom: 50px;
   -webkit-transform: scale(1.2);
@@ -1521,6 +1521,7 @@ img#price-pic {
   z-index: 50; }
   @media (max-width: 500px) {
     img#price-pic {
+      width: 100%;
       -webkit-transform: scale(1);
               transform: scale(1); } }
 
