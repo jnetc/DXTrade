@@ -21,14 +21,12 @@ window.addEventListener('load', () => {
     el.children[1].setAttribute('data-content', `${el.id}`)
     el.children[0].append(btn)
   })
-
-  console.log(arrBtnPlus);
-  
+ 
   const openContent = (e) => {
       // Берем id родителя
     const idEl = e.target.parentElement.id
       // Берем span
-    const childEl = e.target.children[2].children[0]
+    const childEl = e.target.querySelector('span')    
        // Перебираем массив с доп. инфой
     for (const txt of arrBtnPlus) {
       const infoBox = txt.children[1]      

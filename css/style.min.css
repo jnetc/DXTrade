@@ -1525,6 +1525,167 @@ img#price-pic {
       -webkit-transform: scale(1);
               transform: scale(1); } }
 
+#price-stars {
+  width: 300px;
+  height: 120px;
+  position: absolute;
+  top: 70px;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  z-index: 55; }
+  @media (max-width: 500px) {
+    #price-stars {
+      -webkit-transform: scale(1);
+              transform: scale(1); } }
+  #price-stars svg {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    fill: #E6E6E6; }
+    #price-stars svg:nth-of-type(1) {
+      top: 6px;
+      left: 6px;
+      opacity: 0;
+      -webkit-animation: star-xs 3s ease-in-out infinite;
+              animation: star-xs 3s ease-in-out infinite;
+      -webkit-transform: scale(0);
+              transform: scale(0); }
+    #price-stars svg:nth-of-type(2) {
+      top: 20px;
+      left: 42px;
+      opacity: 0;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      -webkit-animation: star-s 3s ease-in-out infinite;
+              animation: star-s 3s ease-in-out infinite;
+      -webkit-animation-delay: 2s;
+              animation-delay: 2s; }
+    #price-stars svg:nth-of-type(3) {
+      top: 45px;
+      left: 15px;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      -webkit-animation: star-m 3s ease-in-out infinite;
+              animation: star-m 3s ease-in-out infinite;
+      -webkit-animation-delay: 4s;
+              animation-delay: 4s; }
+    #price-stars svg:nth-of-type(4) {
+      top: 15px;
+      right: 20px;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      -webkit-animation: star-s 3s ease-in-out infinite;
+              animation: star-s 3s ease-in-out infinite;
+      -webkit-animation-delay: 1s;
+              animation-delay: 1s; }
+    #price-stars svg:nth-of-type(5) {
+      top: 45px;
+      right: 40px;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      -webkit-animation: star-xs 3s ease-in-out infinite;
+              animation: star-xs 3s ease-in-out infinite;
+      -webkit-animation-delay: 2s;
+              animation-delay: 2s; }
+    #price-stars svg:nth-of-type(6) {
+      top: 40px;
+      right: -20px;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      -webkit-animation: star-m 3s ease-in-out infinite;
+              animation: star-m 3s ease-in-out infinite;
+      -webkit-animation-delay: 3s;
+              animation-delay: 3s; }
+    #price-stars svg:nth-of-type(7) {
+      bottom: 21px;
+      right: 5px;
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      -webkit-animation: star-l 3s ease-in-out infinite;
+              animation: star-l 3s ease-in-out infinite;
+      -webkit-animation-delay: 5s;
+              animation-delay: 5s; }
+
+@-webkit-keyframes star-xs {
+  33% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    opacity: 1; }
+  66% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0; } }
+
+@keyframes star-xs {
+  33% {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+    opacity: 1; }
+  66% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0; } }
+
+@-webkit-keyframes star-s {
+  33% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    opacity: 1; }
+  66% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0; } }
+
+@keyframes star-s {
+  33% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    opacity: 1; }
+  66% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0; } }
+
+@-webkit-keyframes star-m {
+  33% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    opacity: 1; }
+  66% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0; } }
+
+@keyframes star-m {
+  33% {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    opacity: 1; }
+  66% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0; } }
+
+@-webkit-keyframes star-l {
+  33% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+  66% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0; } }
+
+@keyframes star-l {
+  33% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1; }
+  66% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    opacity: 0; } }
+
 ul.price-list {
   width: 100%;
   margin-bottom: 70px; }
